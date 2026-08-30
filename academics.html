@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Academics — Stanford Toulouse University</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 25px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6% 50px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .schools {
+        max-width: 1300px;
+        margin: auto;
+        padding: 30px 6% 90px;
+    }
+
+    .school {
+        background: white;
+        border: 1px solid #ddd;
+        margin-bottom: 25px;
+    }
+
+    .school-header {
+        padding: 28px 35px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .school-number {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .school-header h2 {
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+    .programs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .program {
+        padding: 30px 35px;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .program:nth-child(even) {
+        border-right: none;
+    }
+
+    .program h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 8px;
+    }
+
+    .program p {
+        color: #666;
+        font-size: 15px;
+    }
+
+    .program-details {
+        font-family: Arial, sans-serif;
+        color: #8b1e3f;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+
+    .feature {
+        background: #eae8e1;
+        padding: 80px 6%;
+    }
+
+    .feature-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .feature h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .feature p {
+        color: #555;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .quote {
+        border-left: 3px solid #8b1e3f;
+        padding-left: 25px;
+        margin-top: 35px;
+        font-size: 21px;
+        font-style: italic;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    footer p {
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .programs {
+            grid-template-columns: 1fr;
+        }
+
+        .program {
+            border-right: none;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+    <a href="#">Students</a>
+    <a href="#">Faculty & Staff</a>
+    <a href="#">Alumni</a>
+    <a href="#">Library</a>
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+                Stanford Toulouse University
+                <span>EXCELLENCE WITHOUT BORDERS</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="#">Research</a>
+            <a href="#">Admissions</a>
+            <a href="#">Campus Life</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>Stanford Toulouse University</small>
+
+        <h1>Academics</h1>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>Education for the exceptionally curious.</h2>
+
+    <p>
+        Stanford Toulouse University offers a comprehensive range
+        of undergraduate and graduate programs designed to prepare
+        students for an increasingly complex world.
+    </p>
+
+    <p>
+        Our academic community spans engineering, business,
+        sciences, humanities, technology, and several fields that
+        other universities have apparently decided not to take
+        seriously.
+    </p>
+
+</section>
+
+
+<section class="schools">
+
+
+    <!-- SCHOOL OF ENGINEERING -->
+
+    <div class="school">
+
+        <div class="school-header">
+
+            <div class="school-number">
+                SCHOOL 01
+            </div>
+
+            <h2>School of Engineering</h2>
+
+        </div>
+
+
+        <div class="programs">
+
+            <div class="program">
+
+                <h3>Aerospace Engineering</h3>
+
+                <p>
+                    Study the science and engineering of flight
+                    at the heart of Europe's aerospace industry.
+                </p>
+
+                <div class="program-details">
+                    BSc · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Mechanical Engineering</h3>
+
+                <p>
+                    Develop solutions to the world's most complex
+                    mechanical challenges.
+                </p>
+
+                <div class="program-details">
+                    BSc · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Robotics & Autonomous Systems</h3>
+
+                <p>
+                    Designing intelligent machines capable of
+                    operating independently.
+                </p>
+
+                <div class="program-details">
+                    MSc · 120 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Advanced Croissant Engineering</h3>
+
+                <p>
+                    A multidisciplinary study of structural
+                    pastry integrity, lamination dynamics and
+                    butter distribution.
+                </p>
+
+                <div class="program-details">
+                    MSc · 90 ECTS
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BUSINESS -->
+
+    <div class="school">
+
+        <div class="school-header">
+
+            <div class="school-number">
+                SCHOOL 02
+            </div>
+
+            <h2>School of Business</h2>
+
+        </div>
+
+
+        <div class="programs">
+
+            <div class="program">
+
+                <h3>International Business</h3>
+
+                <p>
+                    Build the analytical and leadership skills
+                    required to operate in a global economy.
+                </p>
+
+                <div class="program-details">
+                    BSc · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Finance</h3>
+
+                <p>
+                    Explore financial markets, corporate strategy
+                    and the science of making spreadsheets look impressive.
+                </p>
+
+                <div class="program-details">
+                    MSc · 120 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Strategic Management</h3>
+
+                <p>
+                    Learn to make high-impact decisions with
+                    incomplete information and excessive confidence.
+                </p>
+
+                <div class="program-details">
+                    MSc · 120 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Entrepreneurship</h3>
+
+                <p>
+                    Transform ideas into ventures, presentations,
+                    pitch decks and occasionally actual companies.
+                </p>
+
+                <div class="program-details">
+                    MSc · 90 ECTS
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCIENCE -->
+
+    <div class="school">
+
+        <div class="school-header">
+
+            <div class="school-number">
+                SCHOOL 03
+            </div>
+
+            <h2>School of Natural Sciences</h2>
+
+        </div>
+
+
+        <div class="programs">
+
+            <div class="program">
+
+                <h3>Physics</h3>
+
+                <p>
+                    Investigate the fundamental laws governing
+                    matter, energy and the universe.
+                </p>
+
+                <div class="program-details">
+                    BSc · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Computer Science</h3>
+
+                <p>
+                    Algorithms, systems, artificial intelligence
+                    and the occasional debugging crisis.
+                </p>
+
+                <div class="program-details">
+                    BSc · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Explore machine learning, intelligent systems
+                    and computational approaches to complex problems.
+                </p>
+
+                <div class="program-details">
+                    MSc · 120 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Applied Procrastination</h3>
+
+                <p>
+                    An interdisciplinary investigation into delayed
+                    action, deadline psychology and productivity.
+                </p>
+
+                <div class="program-details">
+                    BSc · 180 ECTS
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HUMANITIES -->
+
+    <div class="school">
+
+        <div class="school-header">
+
+            <div class="school-number">
+                SCHOOL 04
+            </div>
+
+            <h2>School of Arts & Humanities</h2>
+
+        </div>
+
+
+        <div class="programs">
+
+            <div class="program">
+
+                <h3>History</h3>
+
+                <p>
+                    Examine the people, cultures and events that
+                    shaped the modern world.
+                </p>
+
+                <div class="program-details">
+                    BA · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Philosophy</h3>
+
+                <p>
+                    Question assumptions, examine arguments and
+                    determine whether anything actually matters.
+                </p>
+
+                <div class="program-details">
+                    BA · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Gastronomic Sciences</h3>
+
+                <p>
+                    The cultural, scientific and strategic study
+                    of food, cuisine and eating.
+                </p>
+
+                <div class="program-details">
+                    BA · 180 ECTS
+                </div>
+
+            </div>
+
+
+            <div class="program">
+
+                <h3>Strategic Nap Studies</h3>
+
+                <p>
+                    Researching the relationship between rest,
+                    cognition and academic performance.
+                </p>
+
+                <div class="program-details">
+                    MSc · 60 ECTS
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="feature">
+
+    <div class="feature-inner">
+
+        <h2>The STU academic philosophy</h2>
+
+        <p>
+            At Stanford Toulouse, we believe that education should
+            extend beyond the classroom. Students are encouraged
+            to challenge conventional thinking, collaborate across
+            disciplines and pursue questions that do not yet have
+            satisfactory answers.
+        </p>
+
+        <p>
+            Occasionally, these questions concern aerospace
+            engineering. Occasionally, they concern croissants.
+            We consider both equally important.
+        </p>
+
+        <div class="quote">
+            "The university should prepare students for the future,
+            whatever the future happens to be."
+            <br><br>
+            — Prof. Jean-Baptiste Stanford,
+            President & Chancellor
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
+
+        <p style="margin-top:15px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
