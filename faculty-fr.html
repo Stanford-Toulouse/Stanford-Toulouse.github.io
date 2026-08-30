@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enseignants et personnel — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 60px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 60px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .faculty-section {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .faculty-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .faculty-section h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .faculty-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .faculty-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+        min-height: 230px;
+    }
+
+    .faculty-card h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    .faculty-card .department {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .faculty-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .faculty-card a {
+        display: inline-block;
+        margin-top: 18px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .leadership {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .leadership h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .leadership-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .leader {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 25px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .leader h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .leader p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .resources {
+        background: #f1efe9;
+        padding: 75px 6%;
+    }
+
+    .resources-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .resources h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .resources > .resources-inner > p {
+        color: #666;
+        max-width: 850px;
+        margin-bottom: 35px;
+        font-size: 17px;
+    }
+
+    .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .resource {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 28px;
+    }
+
+    .resource h3 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .resource p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .resource a {
+        display: inline-block;
+        color: #8b1e3f;
+        margin-top: 15px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .recruitment {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .recruitment-inner {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .recruitment h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .recruitment p {
+        color: #eee;
+        max-width: 850px;
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .recruitment a {
+        display: inline-block;
+        border: 1px solid white;
+        padding: 12px 22px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .recruitment a:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+        }
+
+        .faculty-grid,
+        .resource-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .leader {
+            flex-direction: column;
+        }
+
+        .leader p {
+            text-align: left;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="faculty-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="faculty.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Enseignants et personnel
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Une communauté académique internationale.
+    </h2>
+
+    <p>
+        L'Université Stanford Toulouse réunit des enseignants,
+        chercheurs et professionnels issus de disciplines et de
+        parcours internationaux variés. Leur expertise contribue
+        directement à la qualité de l'enseignement, de la recherche
+        et des services proposés par l'université.
+    </p>
+
+</section>
+
+
+<!-- FACULTY -->
+
+<section class="faculty-section">
+
+    <div class="faculty-inner">
+
+        <h2>
+            Facultés et départements
+        </h2>
+
+
+        <div class="faculty-grid">
+
+
+            <div class="faculty-card">
+
+                <div class="department">
+                    Sciences
+                </div>
+
+                <h3>
+                    Faculté des sciences
+                </h3>
+
+                <p>
+                    Mathématiques, physique, chimie, sciences de
+                    la Terre et disciplines scientifiques associées.
+                </p>
+
+                <a href="academics-fr.html">
+                    Voir les formations →
+                </a>
+
+            </div>
+
+
+            <div class="faculty-card">
+
+                <div class="department">
+                    Ingénierie
+                </div>
+
+                <h3>
+                    École d'ingénierie
+                </h3>
+
+                <p>
+                    Informatique, systèmes, génie mécanique,
+                    électronique et technologies avancées.
+                </p>
+
+                <a href="academics-fr.html">
+                    Voir les formations →
+                </a>
+
+            </div>
+
+
+            <div class="faculty-card">
+
+                <div class="department">
+                    Humanités
+                </div>
+
+                <h3>
+                    Faculté des humanités
+                </h3>
+
+                <p>
+                    Histoire, philosophie, langues, littérature
+                    et études culturelles.
+                </p>
+
+                <a href="academics-fr.html">
+                    Voir les formations →
+                </a>
+
+            </div>
+
+
+            <div class="faculty-card">
+
+                <div class="department">
+                    Sciences sociales
+                </div>
+
+                <h3>
+                    Faculté des sciences sociales
+                </h3>
+
+                <p>
+                    Économie, sciences politiques, sociologie,
+                    droit et politiques publiques.
+                </p>
+
+                <a href="academics-fr.html">
+                    Voir les formations →
+                </a>
+
+            </div>
+
+
+            <div class="faculty-card">
+
+                <div class="department">
+                    Santé
+                </div>
+
+                <h3>
+                    Faculté des sciences de la santé
+                </h3>
+
+                <p>
+                    Sciences biomédicales, santé publique et
+                    recherche interdisciplinaire en santé.
+                </p>
+
+                <a href="research-fr.html">
+                    Voir la recherche →
+                </a>
+
+            </div>
+
+
+            <div class="faculty-card">
+
+                <div class="department">
+                    Architecture
+                </div>
+
+                <h3>
+                    École d'architecture et design
+                </h3>
+
+                <p>
+                    Architecture, design, urbanisme et nouvelles
+                    approches de la conception des espaces.
+                </p>
+
+                <a href="academics-fr.html">
+                    Voir les formations →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section class="leadership">
+
+    <h2>
+        Direction académique
+    </h2>
+
+
+    <div class="leadership-list">
+
+
+        <div class="leader">
+
+            <h3>
+                Présidence de l'université
+            </h3>
+
+            <p>
+                Direction générale et stratégie institutionnelle
+            </p>
+
+        </div>
+
+
+        <div class="leader">
+
+            <h3>
+                Vice-présidence — Formation
+            </h3>
+
+            <p>
+                Politique académique et programmes d'études
+            </p>
+
+        </div>
+
+
+        <div class="leader">
+
+            <h3>
+                Vice-présidence — Recherche
+            </h3>
+
+            <p>
+                Recherche, innovation et partenariats scientifiques
+            </p>
+
+        </div>
+
+
+        <div class="leader">
+
+            <h3>
+                Direction des études doctorales
+            </h3>
+
+            <p>
+                Formation doctorale et accompagnement des chercheurs
+            </p>
+
+        </div>
+
+
+        <div class="leader">
+
+            <h3>
+                Direction des relations internationales
+            </h3>
+
+            <p>
+                Partenariats et coopération académique internationale
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section class="resources">
+
+    <div class="resources-inner">
+
+        <h2>
+            Ressources pour le personnel
+        </h2>
+
+        <p>
+            Les enseignants et personnels disposent de ressources
+            dédiées à l'exercice de leurs activités pédagogiques,
+            scientifiques et administratives.
+        </p>
+
+
+        <div class="resource-grid">
+
+
+            <div class="resource">
+
+                <h3>
+                    Portail du personnel
+                </h3>
+
+                <p>
+                    Accès aux outils administratifs, documents
+                    internes et services destinés au personnel.
+                </p>
+
+                <a href="portal-fr.html">
+                    Accéder au portail →
+                </a>
+
+            </div>
+
+
+            <div class="resource">
+
+                <h3>
+                    Bibliothèque et ressources numériques
+                </h3>
+
+                <p>
+                    Accès aux bases de données, collections
+                    scientifiques et ressources documentaires.
+                </p>
+
+                <a href="library-fr.html">
+                    Accéder à la bibliothèque →
+                </a>
+
+            </div>
+
+
+            <div class="resource">
+
+                <h3>
+                    Soutien à la recherche
+                </h3>
+
+                <p>
+                    Accompagnement des projets de recherche,
+                    financements et collaborations scientifiques.
+                </p>
+
+                <a href="research-fr.html">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="resource">
+
+                <h3>
+                    Développement professionnel
+                </h3>
+
+                <p>
+                    Formations, accompagnement professionnel et
+                    dispositifs de développement des compétences.
+                </p>
+
+                <a href="#">
+                    Consulter les ressources →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RECRUITMENT -->
+
+<section class="recruitment">
+
+    <div class="recruitment-inner">
+
+        <h2>
+            Rejoindre l'Université Stanford Toulouse
+        </h2>
+
+        <p>
+            L'université recrute régulièrement des enseignants,
+            chercheurs, ingénieurs, personnels administratifs et
+            professionnels spécialisés. Les opportunités disponibles
+            couvrent l'ensemble de nos domaines académiques et
+            administratifs.
+        </p>
+
+        <a href="contact-fr.html">
+            Consulter les opportunités →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
