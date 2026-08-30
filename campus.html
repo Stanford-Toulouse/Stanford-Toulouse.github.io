@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Campus Life — Stanford Toulouse University</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 25px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6% 60px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .campus-image {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .features {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px 6% 90px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .feature {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 35px;
+        min-height: 270px;
+    }
+
+    .feature-number {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .feature h2 {
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .feature p {
+        color: #666;
+        font-size: 15px;
+    }
+
+    .feature a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .experience {
+        background: #eae8e1;
+        padding: 80px 6%;
+    }
+
+    .experience-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .experience h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .experience p {
+        color: #555;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .quote {
+        border-left: 3px solid #8b1e3f;
+        padding-left: 25px;
+        margin-top: 35px;
+        font-size: 20px;
+        font-style: italic;
+        color: #444;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    footer p {
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .features {
+            grid-template-columns: 1fr;
+        }
+
+        .campus-image {
+            height: 300px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+    <a href="#">Students</a>
+    <a href="#">Faculty & Staff</a>
+    <a href="#">Alumni</a>
+    <a href="#">Library</a>
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+                Stanford Toulouse University
+                <span>EXCELLENCE WITHOUT BORDERS</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="research.html">Research</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="campus.html">Campus Life</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>Stanford Toulouse University</small>
+
+        <h1>Campus Life</h1>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>A campus designed for discovery.</h2>
+
+    <p>
+        Life at Stanford Toulouse extends well beyond the classroom.
+        Our campus provides students with spaces to study, collaborate,
+        live, exercise and build lasting connections.
+    </p>
+
+    <p>
+        Located within Toulouse, one of Europe's leading university
+        and aerospace centres, the university offers an environment
+        that combines academic intensity with the quality of life
+        of southern France.
+    </p>
+
+</section>
+
+
+<section style="max-width:1300px; margin:auto; padding:0 6% 70px;">
+
+    <img
+        class="campus-image"
+        src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1800&q=80"
+        alt="University campus"
+    >
+
+</section>
+
+
+<section class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-number">
+            01 — RESIDENTIAL LIFE
+        </div>
+
+        <h2>Student Housing</h2>
+
+        <p>
+            Residential communities provide students with a
+            comfortable and supportive environment throughout
+            their university experience.
+        </p>
+
+        <a href="#">
+            Explore housing →
+        </a>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">
+            02 — DINING
+        </div>
+
+        <h2>Food & Dining</h2>
+
+        <p>
+            From traditional French cuisine to international
+            options, our dining facilities reflect the diversity
+            of the STU community.
+        </p>
+
+        <a href="#">
+            Dining options →
+        </a>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">
+            03 — LIBRARIES
+        </div>
+
+        <h2>Libraries</h2>
+
+        <p>
+            Our libraries provide extensive collections, research
+            facilities and dedicated spaces for individual and
+            collaborative study.
+        </p>
+
+        <a href="#">
+            Library services →
+        </a>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">
+            04 — ATHLETICS
+        </div>
+
+        <h2>Sport & Recreation</h2>
+
+        <p>
+            Students can participate in competitive and recreational
+            sport through university teams, clubs and facilities.
+        </p>
+
+        <a href="#">
+            Athletics →
+        </a>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">
+            05 — STUDENT ORGANISATIONS
+        </div>
+
+        <h2>Clubs & Societies</h2>
+
+        <p>
+            More than 240 student organisations provide opportunities
+            to pursue interests, develop leadership skills and
+            connect with the wider community.
+        </p>
+
+        <a href="#">
+            Find a society →
+        </a>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-number">
+            06 — TRANSPORT
+        </div>
+
+        <h2>Getting Around</h2>
+
+        <p>
+            The university is connected to Toulouse by public
+            transport, cycling infrastructure and an extensive
+            pedestrian network.
+        </p>
+
+        <a href="#">
+            Transportation →
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="experience">
+
+    <div class="experience-inner">
+
+        <h2>The student experience</h2>
+
+        <p>
+            Students at STU are encouraged to make full use of the
+            opportunities available beyond their academic programmes.
+            From student societies and cultural events to research
+            projects and international exchanges, campus life is an
+            integral part of the university experience.
+        </p>
+
+        <p>
+            Toulouse itself provides an exceptional setting for
+            university life, with a thriving cultural scene, a strong
+            technology sector and a long-standing connection to
+            aerospace and engineering.
+        </p>
+
+        <div class="quote">
+            "The best part of university is discovering that your
+            timetable does not necessarily determine your life."
+            <br><br>
+            — Student Experience Survey, 2025
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
+
+        <p style="margin-top:15px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
