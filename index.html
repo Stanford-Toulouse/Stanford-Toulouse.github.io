@@ -393,6 +393,111 @@
 
     }
 
+/* MOBILE NAVIGATION */
+
+.menu-toggle {
+display: none;
+background: none;
+border: none;
+font-size: 28px;
+cursor: pointer;
+color: #222;
+}
+
+.mobile-menu {
+display: none;
+}
+
+.mobile-divider {
+height: 1px;
+background: #ddd;
+margin: 10px 0;
+}
+
+.mobile-language {
+display: flex;
+gap: 8px;
+margin-top: 10px;
+padding-top: 10px;
+border-top: 1px solid #ddd;
+}
+
+.mobile-language a {
+color: #777;
+}
+
+.mobile-language a.active {
+color: #8b1e3f;
+font-weight: bold;
+}
+
+@media (max-width: 850px) {
+
+```
+.header-main {
+    padding: 35px 6% 20px;
+    flex-direction: row;
+    text-align: left;
+}
+
+.brand {
+    flex-direction: row;
+    gap: 12px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.university-name {
+    font-size: 20px;
+}
+
+.university-name span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: none;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+.language-switcher {
+    display: none;
+}
+
+.mobile-menu {
+    padding: 10px 6% 25px;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+.mobile-menu.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu > a {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.mobile-menu > a:hover {
+    color: #8b1e3f;
+}
+```
+
+}
+
+   
 </style>
 ```
 
@@ -420,85 +525,83 @@
 
 <header>
 
-    <div class="header-main">
+```
+<div class="header-main">
+
+    <div class="language-switcher">
+        <a href="index-fr.html">FR</a>
+        <span>|</span>
+        <a href="index.html" class="active">EN</a>
+    </div>
 
 
-        <!-- LANGUAGE SWITCHER -->
+    <div class="brand">
 
-        <div class="language-switcher">
-
-            <a href="index-fr.html">
-                FR
-            </a>
-
-            <span>|</span>
-
-            <a href="index.html" class="active">
-                EN
-            </a>
-
+        <div class="logo">
+            STU
         </div>
 
+        <div class="university-name">
 
-        <!-- UNIVERSITY BRAND -->
+            Stanford Toulouse University
 
-        <div class="brand">
-
-            <div class="logo">
-                STU
-            </div>
-
-            <div class="university-name">
-
-                Stanford Toulouse University
-
-                <span>
-                    EXCELLENCE WITHOUT BORDERS
-                </span>
-
-            </div>
+            <span>
+                EXCELLENCE WITHOUT BORDERS
+            </span>
 
         </div>
-
-
-        <!-- MAIN NAVIGATION -->
-
-        <nav>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="academics.html">
-                Academics
-            </a>
-
-            <a href="research.html">
-                Research
-            </a>
-
-            <a href="admissions.html">
-                Admissions
-            </a>
-
-            <a href="campus.html">
-                Campus Life
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
 
     </div>
 
+
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation menu">
+        ☰
+    </button>
+
+
+    <nav id="main-navigation">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="research.html">Research</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="campus.html">Campus Life</a>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</div>
+
+
+<div class="mobile-menu" id="mobile-menu">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="research.html">Research</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="campus.html">Campus Life</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="mobile-divider"></div>
+
+    <a href="portal.html">Students</a>
+    <a href="faculty.html">Faculty & Staff</a>
+    <a href="alumni.html">Alumni</a>
+    <a href="library.html">Library</a>
+
+    <div class="mobile-language">
+        <a href="index-fr.html">FR</a>
+        <span>|</span>
+        <a href="index.html" class="active">EN</a>
+    </div>
+
+</div>
+```
+
 </header>
+
 
 
 <!-- HERO -->
@@ -780,6 +883,18 @@
 </footer>
 ```
 
+<script>
+
+function toggleMenu() {
+
+    const menu = document.getElementById("mobile-menu");
+
+    menu.classList.toggle("open");
+
+}
+
+</script>
+   
 </body>
 
 </html>
