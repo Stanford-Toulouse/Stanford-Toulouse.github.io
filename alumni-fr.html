@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anciens élèves — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 60px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 60px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .network {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .network-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .network h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .network-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .network-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+        min-height: 230px;
+    }
+
+    .network-card h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .network-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .network-card a {
+        display: inline-block;
+        color: #8b1e3f;
+        margin-top: 18px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .career {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .career h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .career > p {
+        color: #666;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 35px;
+    }
+
+    .career-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .career-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 24px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .career-item h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .career-item p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+        max-width: 500px;
+    }
+
+    .events {
+        background: #f1efe9;
+        padding: 75px 6%;
+    }
+
+    .events-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .events h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .events-inner > p {
+        color: #666;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 35px;
+    }
+
+    .event-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .event {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 25px;
+        padding: 25px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .event-date {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .event h3 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 7px;
+    }
+
+    .event p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .giving {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .giving-inner {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .giving h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .giving p {
+        color: #eee;
+        max-width: 850px;
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .giving a {
+        display: inline-block;
+        border: 1px solid white;
+        padding: 12px 22px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .giving a:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+        }
+
+        .network-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .career-item {
+            flex-direction: column;
+        }
+
+        .career-item p {
+            text-align: left;
+        }
+
+        .event {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="alumni-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="alumni.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Anciens élèves
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Une communauté qui se poursuit au-delà du campus.
+    </h2>
+
+    <p>
+        Le réseau des anciens élèves de l'Université Stanford Toulouse
+        rassemble des diplômés présents dans de nombreux secteurs
+        professionnels et dans différentes régions du monde.
+        Il contribue au maintien des liens entre les diplômés,
+        l'université et les générations actuelles d'étudiants.
+    </p>
+
+</section>
+
+
+<!-- NETWORK -->
+
+<section class="network">
+
+    <div class="network-inner">
+
+        <h2>
+            Le réseau des anciens élèves
+        </h2>
+
+
+        <div class="network-grid">
+
+
+            <div class="network-card">
+
+                <h3>
+                    Réseau international
+                </h3>
+
+                <p>
+                    Un réseau de diplômés permettant de maintenir
+                    des relations professionnelles et académiques
+                    au-delà des frontières.
+                </p>
+
+                <a href="#">
+                    Découvrir le réseau →
+                </a>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <h3>
+                    Événements
+                </h3>
+
+                <p>
+                    Rencontres, conférences et événements organisés
+                    régulièrement pour les membres de la communauté
+                    des anciens élèves.
+                </p>
+
+                <a href="#events">
+                    Voir les événements →
+                </a>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <h3>
+                    Mentorat
+                </h3>
+
+                <p>
+                    Des programmes permettant aux diplômés de
+                    partager leur expérience avec les étudiants
+                    et les jeunes diplômés.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <h3>
+                    Communautés locales
+                </h3>
+
+                <p>
+                    Des groupes d'anciens élèves organisés autour
+                    de différentes villes et régions du monde.
+                </p>
+
+                <a href="#">
+                    Trouver une communauté →
+                </a>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <h3>
+                    Services professionnels
+                </h3>
+
+                <p>
+                    Ressources destinées à accompagner les diplômés
+                    dans leur développement professionnel et leurs
+                    projets de carrière.
+                </p>
+
+                <a href="#career">
+                    Services professionnels →
+                </a>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <h3>
+                    Annuaire des diplômés
+                </h3>
+
+                <p>
+                    Un annuaire permettant aux membres de la
+                    communauté de maintenir leurs coordonnées
+                    et leurs informations professionnelles à jour.
+                </p>
+
+                <a href="#">
+                    Accéder à l'annuaire →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CAREER -->
+
+<section class="career" id="career">
+
+    <h2>
+        Carrière et développement professionnel
+    </h2>
+
+    <p>
+        Le service des anciens élèves propose différentes ressources
+        destinées à accompagner les diplômés tout au long de leur
+        parcours professionnel.
+    </p>
+
+
+    <div class="career-list">
+
+
+        <div class="career-item">
+
+            <h3>
+                Conseil de carrière
+            </h3>
+
+            <p>
+                Accompagnement individuel et ressources pour les
+                transitions professionnelles.
+            </p>
+
+        </div>
+
+
+        <div class="career-item">
+
+            <h3>
+                Réseau professionnel
+            </h3>
+
+            <p>
+                Mise en relation avec des diplômés et professionnels
+                issus de différents secteurs.
+            </p>
+
+        </div>
+
+
+        <div class="career-item">
+
+            <h3>
+                Offres d'emploi
+            </h3>
+
+            <p>
+                Accès à des opportunités professionnelles proposées
+                par le réseau universitaire.
+            </p>
+
+        </div>
+
+
+        <div class="career-item">
+
+            <h3>
+                Entrepreneuriat
+            </h3>
+
+            <p>
+                Ressources et accompagnement pour les diplômés
+                développant un projet entrepreneurial.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- EVENTS -->
+
+<section class="events" id="events">
+
+    <div class="events-inner">
+
+        <h2>
+            Événements et rencontres
+        </h2>
+
+        <p>
+            La communauté des anciens élèves est invitée à participer
+            régulièrement à des conférences, rencontres professionnelles
+            et événements organisés en France et à l'international.
+        </p>
+
+
+        <div class="event-list">
+
+
+            <div class="event">
+
+                <div class="event-date">
+                    Automne
+                </div>
+
+                <div>
+
+                    <h3>
+                        Rencontre annuelle des anciens élèves
+                    </h3>
+
+                    <p>
+                        Une rencontre réunissant diplômés, étudiants,
+                        enseignants et représentants de l'université.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="event-date">
+                    Hiver
+                </div>
+
+                <div>
+
+                    <h3>
+                        Forum des carrières
+                    </h3>
+
+                    <p>
+                        Échanges professionnels et rencontres avec
+                        des entreprises et organisations partenaires.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="event-date">
+                    Printemps
+                </div>
+
+                <div>
+
+                    <h3>
+                        Rencontres internationales
+                    </h3>
+
+                    <p>
+                        Événements organisés avec les communautés
+                        d'anciens élèves présentes à l'étranger.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="event-date">
+                    Toute l'année
+                </div>
+
+                <div>
+
+                    <h3>
+                        Conférences et rencontres professionnelles
+                    </h3>
+
+                    <p>
+                        Une programmation régulière autour des
+                        enjeux scientifiques, économiques et sociaux.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GIVING -->
+
+<section class="giving">
+
+    <div class="giving-inner">
+
+        <h2>
+            Soutenir l'université
+        </h2>
+
+        <p>
+            Les anciens élèves peuvent contribuer au développement
+            des projets universitaires par leur engagement, leur
+            expertise et leur soutien aux initiatives de l'université.
+        </p>
+
+        <a href="contact-fr.html">
+            Contacter le service des anciens élèves →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
