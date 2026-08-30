@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>University Library — Stanford Toulouse University</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 25px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 45px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 18px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+    }
+
+    .search-area {
+        max-width: 1100px;
+        margin: auto;
+        padding: 10px 6% 70px;
+    }
+
+    .search-box {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 30px;
+    }
+
+    .search-box label {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .search-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .search-row input {
+        flex: 1;
+        border: 1px solid #bbb;
+        padding: 14px;
+        font-size: 15px;
+        font-family: Arial, sans-serif;
+    }
+
+    .search-button {
+        background: #8b1e3f;
+        color: white;
+        border: none;
+        padding: 0 25px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+    }
+
+    .library-grid {
+        max-width: 1300px;
+        margin: auto;
+        padding: 0 6% 90px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 25px;
+    }
+
+    .panel {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 32px;
+        margin-bottom: 25px;
+    }
+
+    .panel h2 {
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 22px;
+    }
+
+    .collection {
+        border-top: 1px solid #eee;
+        padding: 18px 0;
+    }
+
+    .collection h3 {
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    .collection p {
+        color: #666;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .hours {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .hours div {
+        border-bottom: 1px solid #eee;
+        padding: 9px 0;
+    }
+
+    .hours div:nth-child(even) {
+        text-align: right;
+        color: #666;
+    }
+
+    .service {
+        padding: 15px 0;
+        border-top: 1px solid #eee;
+    }
+
+    .service h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .service p {
+        color: #666;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .announcement {
+        background: #eae8e1;
+        padding: 70px 6%;
+    }
+
+    .announcement-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .announcement h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .announcement p {
+        color: #555;
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    footer p {
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .library-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .search-row {
+            flex-direction: column;
+        }
+
+        .search-button {
+            padding: 13px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+
+    <a href="portal.html">Students</a>
+    <a href="faculty.html">Faculty & Staff</a>
+    <a href="#">Alumni</a>
+    <a href="library.html">Library</a>
+
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Stanford Toulouse University
+
+                <span>
+                    EXCELLENCE WITHOUT BORDERS
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="academics.html">Academics</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="admissions.html">Admissions</a>
+
+            <a href="campus.html">Campus Life</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Stanford Toulouse University
+        </small>
+
+        <h1>
+            University Library
+        </h1>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>
+        Knowledge without boundaries.
+    </h2>
+
+    <p>
+        The Stanford Toulouse University Library supports teaching,
+        learning and research across all academic disciplines.
+        Students and researchers have access to extensive physical
+        and digital collections, specialist resources and dedicated
+        study environments.
+    </p>
+
+</section>
+
+
+<section class="search-area">
+
+    <div class="search-box">
+
+        <label>
+            Search the library catalogue
+        </label>
+
+        <div class="search-row">
+
+            <input
+                type="text"
+                placeholder="Search books, journals, articles and databases..."
+            >
+
+            <button
+                class="search-button"
+                onclick="alert('Catalogue search is currently unavailable. Please try again later.')"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="library-grid">
+
+
+    <div>
+
+
+        <div class="panel">
+
+            <h2>
+                Collections
+            </h2>
+
+
+            <div class="collection">
+
+                <h3>
+                    Arts & Humanities
+                </h3>
+
+                <p>
+                    Literature, philosophy, history, languages,
+                    art history and cultural studies.
+                </p>
+
+            </div>
+
+
+            <div class="collection">
+
+                <h3>
+                    Social Sciences
+                </h3>
+
+                <p>
+                    Economics, political science, sociology,
+                    international relations and public policy.
+                </p>
+
+            </div>
+
+
+            <div class="collection">
+
+                <h3>
+                    Science & Engineering
+                </h3>
+
+                <p>
+                    Mathematics, computer science, physics,
+                    engineering and applied sciences.
+                </p>
+
+            </div>
+
+
+            <div class="collection">
+
+                <h3>
+                    Special Collections
+                </h3>
+
+                <p>
+                    Rare books, archival materials, university
+                    records and selected historical collections.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>
+                Research support
+            </h2>
+
+
+            <div class="service">
+
+                <h3>
+                    Research Consultations
+                </h3>
+
+                <p>
+                    One-to-one support with literature searches,
+                    research strategies and source evaluation.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Academic Databases
+                </h3>
+
+                <p>
+                    Access scholarly journals, citation databases
+                    and specialist research platforms.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Referencing & Citation
+                </h3>
+
+                <p>
+                    Guidance on citation styles, bibliographic
+                    management and responsible scholarship.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Open Access
+                </h3>
+
+                <p>
+                    Support for researchers publishing and
+                    preserving scholarly work through open access.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div>
+
+
+        <div class="panel">
+
+            <h2>
+                Opening hours
+            </h2>
+
+
+            <div class="hours">
+
+                <div>Monday</div>
+                <div>08:00–22:00</div>
+
+                <div>Tuesday</div>
+                <div>08:00–22:00</div>
+
+                <div>Wednesday</div>
+                <div>08:00–22:00</div>
+
+                <div>Thursday</div>
+                <div>08:00–22:00</div>
+
+                <div>Friday</div>
+                <div>08:00–20:00</div>
+
+                <div>Saturday</div>
+                <div>10:00–18:00</div>
+
+                <div>Sunday</div>
+                <div>10:00–18:00</div>
+
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <h2>
+                Library services
+            </h2>
+
+
+            <div class="service">
+
+                <h3>
+                    Borrowing
+                </h3>
+
+                <p>
+                    Borrow books and physical materials using
+                    your university identification.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Study Spaces
+                </h3>
+
+                <p>
+                    Individual desks, group rooms and silent
+                    study areas are available across the library.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Interlibrary Loan
+                </h3>
+
+                <p>
+                    Request materials not held in the university
+                    collection.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Accessibility
+                </h3>
+
+                <p>
+                    Accessible study spaces and research support
+                    are available upon request.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<section class="announcement">
+
+    <div class="announcement-inner">
+
+        <h2>
+            A place to work, think and discover.
+        </h2>
+
+        <p>
+            The library is more than a collection of resources.
+            It is a central part of the academic community at
+            Stanford Toulouse University.
+        </p>
+
+        <p>
+            Students are encouraged to make use of the library
+            throughout their studies, whether preparing for an
+            examination, beginning a research project or simply
+            finding a quiet place to work.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
+
+        <p style="margin-top:15px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
