@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admissions — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .admission-types {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .admission-inner {
+        max-width: 1250px;
+        margin: auto;
+    }
+
+    .admission-inner > h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .admission-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .admission-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 32px;
+        min-height: 260px;
+    }
+
+    .admission-card h3 {
+        font-size: 23px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .admission-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .requirements {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .requirements h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .requirements > p {
+        color: #666;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 40px;
+    }
+
+    .requirement-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .requirement {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 24px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .requirement h3 {
+        font-size: 19px;
+        font-weight: normal;
+    }
+
+    .requirement p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+        max-width: 450px;
+    }
+
+    .deadlines {
+        background: #f1efe9;
+        padding: 75px 6%;
+    }
+
+    .deadlines-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .deadlines h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .deadline-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+    }
+
+    .deadline-table th,
+    .deadline-table td {
+        padding: 18px 20px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .deadline-table th {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #777;
+    }
+
+    .deadline-table td {
+        font-size: 15px;
+    }
+
+    .financial {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .financial-inner {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .financial h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .financial p {
+        color: #eee;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 20px;
+    }
+
+    .financial a {
+        display: inline-block;
+        border: 1px solid white;
+        padding: 12px 22px;
+        margin-top: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .financial a:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .admission-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .requirement {
+            flex-direction: column;
+        }
+
+        .requirement p {
+            text-align: left;
+        }
+
+        .deadline-table {
+            font-size: 13px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="admissions-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="admissions.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Admissions
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Rejoindre notre communauté universitaire.
+    </h2>
+
+    <p>
+        L'Université Stanford Toulouse accueille des étudiants
+        issus de parcours académiques et culturels variés. Notre
+        processus d'admission vise à identifier des candidats
+        présentant un solide potentiel académique, une réelle
+        curiosité intellectuelle et la volonté de contribuer à
+        notre communauté.
+    </p>
+
+</section>
+
+
+<!-- ADMISSION TYPES -->
+
+<section class="admission-types">
+
+    <div class="admission-inner">
+
+        <h2>
+            Candidater à Stanford Toulouse
+        </h2>
+
+
+        <div class="admission-grid">
+
+
+            <div class="admission-card">
+
+                <h3>
+                    Premier cycle
+                </h3>
+
+                <p>
+                    Les candidatures au premier cycle sont évaluées
+                    sur la base du parcours scolaire, des résultats
+                    académiques, des activités personnelles et de
+                    la motivation du candidat.
+                </p>
+
+            </div>
+
+
+            <div class="admission-card">
+
+                <h3>
+                    Cycle supérieur
+                </h3>
+
+                <p>
+                    Les programmes de master et de doctorat recherchent
+                    des candidats disposant d'une solide préparation
+                    académique et d'un projet d'études ou de recherche
+                    clairement défini.
+                </p>
+
+            </div>
+
+
+            <div class="admission-card">
+
+                <h3>
+                    Candidats internationaux
+                </h3>
+
+                <p>
+                    Les étudiants internationaux bénéficient d'un
+                    accompagnement spécifique concernant les démarches
+                    administratives, les documents requis et leur
+                    intégration au sein de l'université.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REQUIREMENTS -->
+
+<section class="requirements">
+
+    <h2>
+        Conditions générales
+    </h2>
+
+    <p>
+        Les conditions d'admission varient selon le programme choisi.
+        Les candidats doivent fournir l'ensemble des documents
+        nécessaires avant la date limite correspondant à leur
+        candidature.
+    </p>
+
+
+    <div class="requirement-list">
+
+
+        <div class="requirement">
+
+            <h3>
+                Dossier académique
+            </h3>
+
+            <p>
+                Relevés de notes et diplômes obtenus ou en cours
+                d'obtention.
+            </p>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <h3>
+                Lettre de motivation
+            </h3>
+
+            <p>
+                Présentation du parcours, des objectifs et des
+                motivations du candidat.
+            </p>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <h3>
+                Recommandations
+            </h3>
+
+            <p>
+                Lettres de recommandation selon les exigences
+                du programme choisi.
+            </p>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <h3>
+                Maîtrise linguistique
+            </h3>
+
+            <p>
+                Justificatif du niveau linguistique requis pour
+                le programme concerné.
+            </p>
+
+        </div>
+
+
+        <div class="requirement">
+
+            <h3>
+                Documents complémentaires
+            </h3>
+
+            <p>
+                Les programmes peuvent demander des documents
+                supplémentaires ou des travaux spécifiques.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- DEADLINES -->
+
+<section class="deadlines">
+
+    <div class="deadlines-inner">
+
+        <h2>
+            Calendrier des candidatures
+        </h2>
+
+
+        <table class="deadline-table">
+
+            <tr>
+
+                <th>
+                    Type de candidature
+                </th>
+
+                <th>
+                    Ouverture
+                </th>
+
+                <th>
+                    Date limite
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Premier cycle
+                </td>
+
+                <td>
+                    Septembre
+                </td>
+
+                <td>
+                    Janvier
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Master
+                </td>
+
+                <td>
+                    Octobre
+                </td>
+
+                <td>
+                    Février
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Doctorat
+                </td>
+
+                <td>
+                    Septembre
+                </td>
+
+                <td>
+                    Décembre
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    Candidats internationaux
+                </td>
+
+                <td>
+                    Septembre
+                </td>
+
+                <td>
+                    Janvier
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- FINANCIAL AID -->
+
+<section class="financial">
+
+    <div class="financial-inner">
+
+        <h2>
+            Frais de scolarité et aides financières
+        </h2>
+
+        <p>
+            L'Université Stanford Toulouse s'engage à rendre ses
+            formations accessibles aux étudiants issus de parcours
+            et de situations financières diverses.
+        </p>
+
+        <p>
+            Des dispositifs d'aide financière, de bourses et
+            d'accompagnement peuvent être proposés selon le
+            programme et la situation du candidat.
+        </p>
+
+        <a href="contact-fr.html">
+            Contacter le service des admissions →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
