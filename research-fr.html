@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Recherche — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .research-areas {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .research-inner {
+        max-width: 1250px;
+        margin: auto;
+    }
+
+    .research-areas h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .area-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .area {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 32px;
+        min-height: 230px;
+    }
+
+    .area h3 {
+        font-size: 22px;
+        font-weight: normal;
+        margin-bottom: 14px;
+    }
+
+    .area p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .area a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .centres {
+        max-width: 1150px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .centres h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .centres > p {
+        color: #666;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 35px;
+    }
+
+    .centre-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .centre {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 25px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .centre h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .centre p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .research-cta {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .research-cta-inner {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .research-cta h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .research-cta p {
+        color: #eee;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 25px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        border: 1px solid white;
+        padding: 12px 22px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .cta-button:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .area-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .centre {
+            flex-direction: column;
+        }
+
+        .centre p {
+            text-align: left;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="research-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="research.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Recherche
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Faire progresser les connaissances.
+    </h2>
+
+    <p>
+        La recherche occupe une place centrale dans la mission de
+        l'Université Stanford Toulouse. Nos équipes développent des
+        travaux fondamentaux et appliqués dans un large éventail
+        de disciplines, en collaboration avec des partenaires
+        académiques, institutionnels et industriels.
+    </p>
+
+</section>
+
+
+<!-- RESEARCH AREAS -->
+
+<section class="research-areas">
+
+    <div class="research-inner">
+
+        <h2>
+            Domaines de recherche
+        </h2>
+
+
+        <div class="area-grid">
+
+
+            <div class="area">
+
+                <h3>
+                    Sciences et ingénierie
+                </h3>
+
+                <p>
+                    Des recherches consacrées aux mathématiques,
+                    à la physique, à l'informatique, aux matériaux
+                    et aux technologies émergentes.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="area">
+
+                <h3>
+                    Santé et sciences du vivant
+                </h3>
+
+                <p>
+                    Des travaux interdisciplinaires portant sur
+                    la biologie, les systèmes de santé et les
+                    nouvelles approches thérapeutiques.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="area">
+
+                <h3>
+                    Intelligence artificielle
+                </h3>
+
+                <p>
+                    Recherche sur l'apprentissage automatique,
+                    l'intelligence artificielle et leurs
+                    applications scientifiques et industrielles.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="area">
+
+                <h3>
+                    Environnement et climat
+                </h3>
+
+                <p>
+                    Étudier les transformations environnementales
+                    et développer des solutions durables à long terme.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="area">
+
+                <h3>
+                    Sciences sociales
+                </h3>
+
+                <p>
+                    Comprendre les transformations économiques,
+                    politiques et sociales qui façonnent les
+                    sociétés contemporaines.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="area">
+
+                <h3>
+                    Humanités et culture
+                </h3>
+
+                <p>
+                    Explorer les langues, les cultures, l'histoire,
+                    la philosophie et les formes contemporaines
+                    de création.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CENTRES -->
+
+<section class="centres">
+
+    <h2>
+        Centres et instituts
+    </h2>
+
+    <p>
+        Les centres de recherche de l'université réunissent
+        chercheurs, enseignants et étudiants autour de programmes
+        scientifiques communs.
+    </p>
+
+
+    <div class="centre-list">
+
+
+        <div class="centre">
+
+            <h3>
+                Institut des systèmes complexes
+            </h3>
+
+            <p>
+                Sciences computationnelles et systèmes
+            </p>
+
+        </div>
+
+
+        <div class="centre">
+
+            <h3>
+                Centre de recherche en intelligence artificielle
+            </h3>
+
+            <p>
+                IA, apprentissage automatique et données
+            </p>
+
+        </div>
+
+
+        <div class="centre">
+
+            <h3>
+                Institut des sciences environnementales
+            </h3>
+
+            <p>
+                Climat, biodiversité et transition énergétique
+            </p>
+
+        </div>
+
+
+        <div class="centre">
+
+            <h3>
+                Centre d'études européennes
+            </h3>
+
+            <p>
+                Sociétés, institutions et politiques publiques
+            </p>
+
+        </div>
+
+
+        <div class="centre">
+
+            <h3>
+                Institut des matériaux avancés
+            </h3>
+
+            <p>
+                Nanotechnologies et matériaux fonctionnels
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="research-cta">
+
+    <div class="research-cta-inner">
+
+        <h2>
+            Collaborer avec nos chercheurs
+        </h2>
+
+        <p>
+            L'Université Stanford Toulouse accueille les collaborations
+            scientifiques, les partenariats institutionnels et les
+            projets de recherche interdisciplinaires.
+        </p>
+
+        <a class="cta-button" href="contact-fr.html">
+            Nous contacter
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
