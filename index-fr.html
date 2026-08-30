@@ -1,1 +1,742 @@
+<!DOCTYPE html>
 
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 115px 6%;
+    }
+
+    .hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+        line-height: 1.05;
+        font-weight: normal;
+        max-width: 900px;
+        margin-top: 20px;
+    }
+
+    .hero p {
+        max-width: 650px;
+        margin-top: 25px;
+        font-size: 20px;
+        color: #eee;
+    }
+
+    .hero-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 13px 25px;
+        border: 1px solid white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .hero-button:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
+    .intro {
+        max-width: 1150px;
+        margin: auto;
+        padding: 85px 6%;
+    }
+
+    .intro h2 {
+        font-size: 43px;
+        font-weight: normal;
+        margin-bottom: 22px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 850px;
+    }
+
+    .features {
+        background: #eae8e1;
+        padding: 80px 6%;
+    }
+
+    .features-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .features h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .feature {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 35px;
+        min-height: 230px;
+    }
+
+    .feature h3 {
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .feature p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .feature a {
+        display: inline-block;
+        margin-top: 22px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .news {
+        max-width: 1200px;
+        margin: auto;
+        padding: 85px 6%;
+    }
+
+    .news h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .news-item {
+        border-top: 3px solid #8b1e3f;
+        padding-top: 20px;
+    }
+
+    .news-date {
+        font-family: Arial, sans-serif;
+        color: #777;
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .news-item h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin: 10px 0;
+    }
+
+    .news-item p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .quote {
+        background: #151515;
+        color: white;
+        padding: 80px 6%;
+    }
+
+    .quote-inner {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .quote blockquote {
+        font-size: 31px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    .quote cite {
+        display: block;
+        margin-top: 20px;
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+    }
+
+    footer {
+        background: #111;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+        }
+
+        .feature-grid,
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="index-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="index.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Le savoir sans frontières.
+        </h1>
+
+        <p>
+            Une université internationale au cœur de Toulouse,
+            réunissant des étudiants, des chercheurs et des
+            enseignants venus du monde entier.
+        </p>
+
+        <a class="hero-button" href="about-fr.html">
+            Découvrir Stanford Toulouse
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>
+        Une université façonnée par son territoire.
+    </h2>
+
+    <p>
+        L'Université Stanford Toulouse associe une ouverture
+        internationale aux traditions intellectuelles du
+        Sud-Ouest de la France. Notre communauté rassemble
+        des disciplines, des cultures et des générations
+        autour d'un engagement commun en faveur de la recherche,
+        de l'enseignement et de la découverte.
+    </p>
+
+</section>
+
+
+<section class="features">
+
+    <div class="features-inner">
+
+        <h2>
+            Découvrir Stanford Toulouse
+        </h2>
+
+
+        <div class="feature-grid">
+
+
+            <div class="feature">
+
+                <h3>
+                    Formations
+                </h3>
+
+                <p>
+                    Découvrez nos programmes de licence et de
+                    master en ingénierie, sciences humaines,
+                    sciences, sciences sociales et gestion.
+                </p>
+
+                <a href="academics-fr.html">
+                    Découvrir les formations →
+                </a>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    Recherche
+                </h3>
+
+                <p>
+                    Nos chercheurs travaillent à la croisée
+                    des disciplines afin de répondre aux grands
+                    enjeux scientifiques, technologiques et sociaux.
+                </p>
+
+                <a href="research-fr.html">
+                    Découvrir la recherche →
+                </a>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>
+                    Vie du campus
+                </h3>
+
+                <p>
+                    Des associations étudiantes aux événements
+                    culturels, découvrez la vie universitaire
+                    au-delà des salles de cours.
+                </p>
+
+                <a href="campus-fr.html">
+                    Découvrir la vie du campus →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="news">
+
+    <h2>
+        Actualités de l'université
+    </h2>
+
+
+    <div class="news-grid">
+
+
+        <div class="news-item">
+
+            <div class="news-date">
+                Août 2026
+            </div>
+
+            <h3>
+                Stanford Toulouse annonce une nouvelle initiative de recherche
+            </h3>
+
+            <p>
+                L'université lance un nouveau programme interdisciplinaire
+                réunissant des chercheurs de plusieurs établissements européens.
+            </p>
+
+        </div>
+
+
+        <div class="news-item">
+
+            <div class="news-date">
+                Juillet 2026
+            </div>
+
+            <h3>
+                La nouvelle année universitaire débutera en septembre
+            </h3>
+
+            <p>
+                Étudiants et enseignants se préparent à accueillir
+                la nouvelle promotion pour l'année universitaire 2026–2027.
+            </p>
+
+        </div>
+
+
+        <div class="news-item">
+
+            <div class="news-date">
+                Juin 2026
+            </div>
+
+            <h3>
+                L'université développe ses partenariats internationaux
+            </h3>
+
+            <p>
+                De nouvelles collaborations offriront des opportunités
+                aux étudiants et aux chercheurs du monde entier.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="quote">
+
+    <div class="quote-inner">
+
+        <blockquote>
+            « La quête du savoir est un voyage sans frontières. »
+        </blockquote>
+
+        <cite>
+            Université Stanford Toulouse
+        </cite>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
