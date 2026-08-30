@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portail étudiant — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        color: #222;
+        background: #f4f3f0;
+        line-height: 1.5;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+        font-size: 13px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-family: Georgia, serif;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-family: Georgia, serif;
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .portal-header {
+        background: #8b1e3f;
+        color: white;
+        padding: 55px 6%;
+    }
+
+    .portal-header-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .portal-header small {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+
+    .portal-header h1 {
+        font-family: Georgia, serif;
+        font-size: 48px;
+        font-weight: normal;
+        margin-top: 8px;
+    }
+
+    .portal-header p {
+        margin-top: 10px;
+        color: #eee;
+    }
+
+    .portal {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 6% 80px;
+    }
+
+    .welcome {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+
+    .welcome h2 {
+        font-family: Georgia, serif;
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 8px;
+    }
+
+    .welcome p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .dashboard {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 25px;
+    }
+
+    .panel {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 28px;
+    }
+
+    .panel h2 {
+        font-family: Georgia, serif;
+        font-size: 27px;
+        font-weight: normal;
+        margin-bottom: 22px;
+    }
+
+    .panel h3 {
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .panel p {
+        color: #666;
+        font-size: 13px;
+    }
+
+    .course {
+        padding: 17px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .course:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .course-code {
+        color: #8b1e3f;
+        font-size: 11px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+
+    .course-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        font-size: 12px;
+        color: #888;
+    }
+
+    .schedule {
+        margin-top: 25px;
+    }
+
+    .schedule-row {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 15px;
+        padding: 13px 0;
+        border-top: 1px solid #ddd;
+        font-size: 13px;
+    }
+
+    .schedule-time {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .notice {
+        padding: 18px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .notice:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .notice-date {
+        color: #888;
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+
+    .notice a {
+        color: #8b1e3f;
+        font-size: 12px;
+    }
+
+    .quick-links {
+        margin-top: 25px;
+        display: grid;
+        gap: 10px;
+    }
+
+    .quick-link {
+        display: block;
+        border: 1px solid #ddd;
+        padding: 15px;
+        background: #fafafa;
+        font-size: 13px;
+    }
+
+    .quick-link:hover {
+        border-color: #8b1e3f;
+        color: #8b1e3f;
+    }
+
+    .quick-link span {
+        display: block;
+        color: #888;
+        font-size: 11px;
+        margin-top: 3px;
+    }
+
+    .services {
+        margin-top: 25px;
+        background: #eae8e1;
+        padding: 35px;
+    }
+
+    .services h2 {
+        font-family: Georgia, serif;
+        font-size: 30px;
+        font-weight: normal;
+        margin-bottom: 22px;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .service {
+        background: white;
+        padding: 22px;
+        border: 1px solid #ddd;
+    }
+
+    .service h3 {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 7px;
+    }
+
+    .service p {
+        color: #666;
+        font-size: 12px;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 45px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .dashboard {
+            grid-template-columns: 1fr;
+        }
+
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .portal-header h1 {
+            font-size: 40px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="portal-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="portal.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- PORTAL HEADER -->
+
+<section class="portal-header">
+
+    <div class="portal-header-inner">
+
+        <small>
+            Espace étudiant
+        </small>
+
+        <h1>
+            Portail étudiant
+        </h1>
+
+        <p>
+            Services académiques, informations et ressources étudiantes
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- DASHBOARD -->
+
+<main class="portal">
+
+
+    <section class="welcome">
+
+        <h2>
+            Bienvenue sur votre espace étudiant
+        </h2>
+
+        <p>
+            Retrouvez ici les principales informations relatives
+            à votre parcours universitaire, vos enseignements et
+            les services mis à votre disposition.
+        </p>
+
+    </section>
+
+
+    <div class="dashboard">
+
+
+        <!-- COURSES -->
+
+        <section class="panel">
+
+            <h2>
+                Mes enseignements
+            </h2>
+
+
+            <div class="course">
+
+                <div class="course-code">
+                    MATH 201
+                </div>
+
+                <h3>
+                    Analyse et méthodes mathématiques
+                </h3>
+
+                <p>
+                    Département de mathématiques
+                </p>
+
+                <div class="course-meta">
+
+                    <span>
+                        Semestre d'automne
+                    </span>
+
+                    <span>
+                        6 ECTS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-code">
+                    CS 214
+                </div>
+
+                <h3>
+                    Algorithmique et structures de données
+                </h3>
+
+                <p>
+                    Département d'informatique
+                </p>
+
+                <div class="course-meta">
+
+                    <span>
+                        Semestre d'automne
+                    </span>
+
+                    <span>
+                        6 ECTS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-code">
+                    ECON 203
+                </div>
+
+                <h3>
+                    Économie et politiques publiques
+                </h3>
+
+                <p>
+                    Département d'économie
+                </p>
+
+                <div class="course-meta">
+
+                    <span>
+                        Semestre d'automne
+                    </span>
+
+                    <span>
+                        5 ECTS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-code">
+                    HIST 217
+                </div>
+
+                <h3>
+                    Histoire contemporaine
+                </h3>
+
+                <p>
+                    Département d'histoire
+                </p>
+
+                <div class="course-meta">
+
+                    <span>
+                        Semestre d'automne
+                    </span>
+
+                    <span>
+                        5 ECTS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="course">
+
+                <div class="course-code">
+                    LANG 105
+                </div>
+
+                <h3>
+                    Langue et communication académique
+                </h3>
+
+                <p>
+                    Centre des langues
+                </p>
+
+                <div class="course-meta">
+
+                    <span>
+                        Semestre d'automne
+                    </span>
+
+                    <span>
+                        4 ECTS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="schedule">
+
+                <h2>
+                    Emploi du temps
+                </h2>
+
+
+                <div class="schedule-row">
+
+                    <div class="schedule-time">
+                        09:00
+                    </div>
+
+                    <div>
+                        MATH 201 — Salle A204
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-row">
+
+                    <div class="schedule-time">
+                        11:00
+                    </div>
+
+                    <div>
+                        CS 214 — Laboratoire informatique
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-row">
+
+                    <div class="schedule-time">
+                        14:00
+                    </div>
+
+                    <div>
+                        ECON 203 — Amphithéâtre B
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-row">
+
+                    <div class="schedule-time">
+                        16:00
+                    </div>
+
+                    <div>
+                        LANG 105 — Salle C112
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIDE -->
+
+        <aside>
+
+
+            <section class="panel">
+
+                <h2>
+                    Informations
+                </h2>
+
+
+                <div class="notice">
+
+                    <div class="notice-date">
+                        30 AOÛT 2026
+                    </div>
+
+                    <h3>
+                        Inscriptions pédagogiques
+                    </h3>
+
+                    <p>
+                        Vérifiez votre inscription aux enseignements
+                        avant la date limite.
+                    </p>
+
+                    <a href="academics-fr.html">
+                        Consulter →
+                    </a>
+
+                </div>
+
+
+                <div class="notice">
+
+                    <div class="notice-date">
+                        28 AOÛT 2026
+                    </div>
+
+                    <h3>
+                        Calendrier universitaire
+                    </h3>
+
+                    <p>
+                        Consultez les principales dates du semestre.
+                    </p>
+
+                    <a href="#">
+                        Voir le calendrier →
+                    </a>
+
+                </div>
+
+
+                <div class="notice">
+
+                    <div class="notice-date">
+                        25 AOÛT 2026
+                    </div>
+
+                    <h3>
+                        Services numériques
+                    </h3>
+
+                    <p>
+                        Accédez aux outils et ressources numériques
+                        de l'université.
+                    </p>
+
+                    <a href="#">
+                        Accéder →
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+            <section class="panel" style="margin-top: 25px;">
+
+                <h2>
+                    Accès rapides
+                </h2>
+
+
+                <div class="quick-links">
+
+                    <a href="#" class="quick-link">
+
+                        Relevés de notes
+
+                        <span>
+                            Consulter vos résultats académiques
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="quick-link">
+
+                        Inscriptions
+
+                        <span>
+                            Gérer vos inscriptions pédagogiques
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="quick-link">
+
+                        Documents administratifs
+
+                        <span>
+                            Certificats et documents officiels
+                        </span>
+
+                    </a>
+
+
+                    <a href="library-fr.html" class="quick-link">
+
+                        Bibliothèque
+
+                        <span>
+                            Catalogue et ressources numériques
+                        </span>
+
+                    </a>
+
+
+                    <a href="contact-fr.html" class="quick-link">
+
+                        Assistance
+
+                        <span>
+                            Contacter les services étudiants
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <h2>
+            Services aux étudiants
+        </h2>
+
+
+        <div class="service-grid">
+
+
+            <div class="service">
+
+                <h3>
+                    Scolarité
+                </h3>
+
+                <p>
+                    Inscriptions, documents administratifs et
+                    accompagnement du parcours universitaire.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Bibliothèque
+                </h3>
+
+                <p>
+                    Ressources documentaires, espaces de travail
+                    et accompagnement à la recherche.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Vie étudiante
+                </h3>
+
+                <p>
+                    Associations, activités, événements et
+                    services proposés sur le campus.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Mobilité internationale
+                </h3>
+
+                <p>
+                    Programmes d'échange et accompagnement des
+                    projets d'études à l'international.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Carrière
+                </h3>
+
+                <p>
+                    Stages, orientation professionnelle et
+                    accompagnement vers l'emploi.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Assistance informatique
+                </h3>
+
+                <p>
+                    Support concernant les comptes, services
+                    numériques et outils universitaires.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
