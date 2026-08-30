@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Stanford Toulouse University</title>
 
 <style>
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -27,7 +30,9 @@
         text-decoration: none;
     }
 
+
     /* TOP BAR */
+
     .top-bar {
         background: #111;
         color: white;
@@ -39,7 +44,9 @@
         gap: 25px;
     }
 
+
     /* HEADER */
+
     header {
         background: white;
         border-bottom: 1px solid #ddd;
@@ -48,10 +55,11 @@
     .header-main {
         max-width: 1300px;
         margin: auto;
-        padding: 25px 6%;
+        padding: 45px 6% 25px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
     }
 
     .brand {
@@ -76,7 +84,6 @@
     .university-name {
         font-size: 27px;
         line-height: 1.05;
-        color: #222;
     }
 
     .university-name span {
@@ -91,7 +98,7 @@
     nav {
         font-family: Arial, sans-serif;
         display: flex;
-        gap: 25px;
+        gap: 22px;
         font-size: 14px;
     }
 
@@ -99,221 +106,173 @@
         color: #8b1e3f;
     }
 
-    /* HERO */
-    .hero {
-        min-height: 570px;
-        background:
-            linear-gradient(rgba(20,20,20,0.48), rgba(20,20,20,0.48)),
-            url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80");
-        background-size: cover;
-        background-position: center;
+
+    /* LANGUAGE SWITCHER */
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
         display: flex;
+        gap: 8px;
         align-items: center;
-        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
     }
 
-    .hero-content {
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 115px 6%;
+    }
+
+    .hero-inner {
         max-width: 1300px;
-        width: 100%;
         margin: auto;
-        padding: 60px 6%;
     }
 
     .hero small {
         font-family: Arial, sans-serif;
         text-transform: uppercase;
         letter-spacing: 3px;
-        font-size: 13px;
     }
 
     .hero h1 {
-        font-size: clamp(48px, 7vw, 86px);
+        font-size: 75px;
+        line-height: 1.05;
         font-weight: normal;
-        line-height: 0.95;
-        max-width: 850px;
-        margin: 20px 0;
+        max-width: 900px;
+        margin-top: 20px;
     }
 
     .hero p {
-        font-size: 21px;
         max-width: 650px;
-        margin-bottom: 30px;
+        margin-top: 25px;
+        font-size: 20px;
+        color: #eee;
     }
 
-    .button {
+    .hero-button {
         display: inline-block;
-        background: #8b1e3f;
-        color: white;
-        padding: 14px 28px;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-right: 10px;
-    }
-
-    .button:hover {
-        background: #6e1732;
-    }
-
-    .button.secondary {
-        background: transparent;
+        margin-top: 30px;
+        padding: 13px 25px;
         border: 1px solid white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
     }
+
+    .hero-button:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
 
     /* INTRO */
+
     .intro {
-        max-width: 1100px;
+        max-width: 1150px;
         margin: auto;
-        padding: 90px 6%;
-        text-align: center;
+        padding: 85px 6%;
     }
 
     .intro h2 {
-        font-size: 42px;
+        font-size: 43px;
         font-weight: normal;
-        margin-bottom: 25px;
+        margin-bottom: 22px;
     }
 
     .intro p {
-        font-size: 19px;
         color: #555;
+        font-size: 18px;
+        max-width: 850px;
     }
 
-    /* STATISTICS */
-    .stats {
-        background: #8b1e3f;
-        color: white;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        text-align: center;
+
+    /* FEATURE GRID */
+
+    .features {
+        background: #eae8e1;
+        padding: 80px 6%;
     }
 
-    .stat {
-        padding: 45px 20px;
-        border-right: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .stat:last-child {
-        border: none;
-    }
-
-    .stat strong {
-        display: block;
-        font-size: 43px;
-        font-weight: normal;
-    }
-
-    .stat span {
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-    }
-
-    /* PROGRAMS */
-    .section {
+    .features-inner {
         max-width: 1300px;
         margin: auto;
-        padding: 90px 6%;
     }
 
-    .section-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        margin-bottom: 40px;
-    }
-
-    .section-title h2 {
+    .features h2 {
         font-size: 40px;
         font-weight: normal;
+        margin-bottom: 35px;
     }
 
-    .section-title p {
-        color: #777;
-        font-family: Arial, sans-serif;
-    }
-
-    .cards {
+    .feature-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+        gap: 20px;
     }
 
-    .card {
+    .feature {
         background: white;
         border: 1px solid #ddd;
         padding: 35px;
-        min-height: 260px;
-        transition: 0.2s;
+        min-height: 230px;
     }
 
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-
-    .card-number {
-        font-family: Arial, sans-serif;
-        color: #8b1e3f;
-        font-size: 13px;
-        margin-bottom: 30px;
-    }
-
-    .card h3 {
-        font-size: 25px;
+    .feature h3 {
+        font-size: 24px;
         font-weight: normal;
         margin-bottom: 15px;
     }
 
-    .card p {
-        color: #666;
-        font-size: 15px;
-    }
-
-    /* FEATURE */
-    .feature {
-        background: #eae8e1;
-    }
-
-    .feature-inner {
-        max-width: 1300px;
-        margin: auto;
-        padding: 90px 6%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 70px;
-        align-items: center;
-    }
-
-    .feature img {
-        width: 100%;
-        height: 420px;
-        object-fit: cover;
-    }
-
-    .feature h2 {
-        font-size: 44px;
-        font-weight: normal;
-        line-height: 1.1;
-        margin-bottom: 25px;
-    }
-
     .feature p {
-        color: #555;
-        margin-bottom: 25px;
+        color: #666;
+        font-size: 14px;
     }
+
+    .feature a {
+        display: inline-block;
+        margin-top: 22px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
 
     /* NEWS */
+
     .news {
-        background: white;
+        max-width: 1200px;
+        margin: auto;
+        padding: 85px 6%;
+    }
+
+    .news h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 30px;
     }
 
     .news-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
+        gap: 25px;
     }
 
     .news-item {
@@ -321,69 +280,92 @@
         padding-top: 20px;
     }
 
-    .news-item small {
+    .news-date {
         font-family: Arial, sans-serif;
-        color: #888;
+        color: #777;
+        font-size: 11px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
 
     .news-item h3 {
-        font-size: 22px;
+        font-size: 21px;
         font-weight: normal;
-        margin: 12px 0;
+        margin: 10px 0;
     }
 
     .news-item p {
         color: #666;
+        font-size: 14px;
     }
 
-    /* FOOTER */
-    footer {
+
+    /* QUOTE */
+
+    .quote {
         background: #151515;
         color: white;
-        padding: 60px 6% 30px;
+        padding: 80px 6%;
     }
 
-    .footer-grid {
-        max-width: 1300px;
+    .quote-inner {
+        max-width: 900px;
         margin: auto;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 50px;
+        text-align: center;
     }
 
-    footer h3 {
-        font-size: 20px;
-        font-weight: normal;
-        margin-bottom: 20px;
+    .quote blockquote {
+        font-size: 31px;
+        font-style: italic;
+        line-height: 1.4;
     }
 
-    footer p,
-    footer li {
+    .quote cite {
+        display: block;
+        margin-top: 20px;
         color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        background: #111;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
         font-family: Arial, sans-serif;
         font-size: 13px;
     }
 
-    footer ul {
-        list-style: none;
+    .footer-links a:hover {
+        color: #c9a3b0;
     }
 
-    footer li {
-        margin-bottom: 8px;
-    }
-
-    .copyright {
-        max-width: 1300px;
-        margin: 50px auto 0;
-        padding-top: 20px;
-        border-top: 1px solid #333;
-        color: #666;
+    footer p {
+        color: #888;
         font-family: Arial, sans-serif;
-        font-size: 11px;
+        font-size: 12px;
     }
+
 
     /* MOBILE */
-    @media (max-width: 800px) {
+
+    @media (max-width: 900px) {
 
         .header-main {
             flex-direction: column;
@@ -391,38 +373,26 @@
             text-align: center;
         }
 
-        nav {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
         .brand {
             flex-direction: column;
         }
 
-        .stats {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .cards,
-        .news-grid,
-        .feature-inner,
-        .footer-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .hero {
-            min-height: 500px;
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .hero h1 {
             font-size: 55px;
         }
 
-        .feature img {
-            height: 300px;
+        .feature-grid,
+        .news-grid {
+            grid-template-columns: 1fr;
         }
+
     }
+
 </style>
 ```
 
@@ -431,348 +401,385 @@
 <body>
 
 ```
+<!-- TOP BAR -->
+
 <div class="top-bar">
-    <a href="portal.html">Student Portal</a>
+
+    <a href="portal.html">Students</a>
+
     <a href="faculty.html">Faculty & Staff</a>
+
     <a href="alumni.html">Alumni</a>
+
     <a href="library.html">Library</a>
+
 </div>
 
+
+<!-- HEADER -->
+
 <header>
+
     <div class="header-main">
 
+
+        <!-- LANGUAGE SWITCHER -->
+
+        <div class="language-switcher">
+
+            <a href="index-fr.html">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="index.html" class="active">
+                EN
+            </a>
+
+        </div>
+
+
+        <!-- UNIVERSITY BRAND -->
+
         <div class="brand">
-            <div class="logo">STU</div>
+
+            <div class="logo">
+                STU
+            </div>
 
             <div class="university-name">
+
                 Stanford Toulouse University
-                <span>EXCELLENCE WITHOUT BORDERS</span>
+
+                <span>
+                    EXCELLENCE WITHOUT BORDERS
+                </span>
+
             </div>
+
         </div>
+
+
+        <!-- MAIN NAVIGATION -->
 
         <nav>
-            <a href="about.html">About</a>
-            <a href="academics.html">Academics</a>
-            <a href="research.html">Research</a>
-            <a href="admissions.html">Admissions</a>
-            <a href="campus.html">Campus Life</a>
-            <a href="contact.html">Contact</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="campus.html">
+                Campus Life
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
         </nav>
 
+
     </div>
+
 </header>
 
-<main>
 
-    <section class="hero">
-        <div class="hero-content">
+<!-- HERO -->
 
-            <small>Stanford Toulouse University</small>
+<section class="hero">
 
-            <h1>
-                The future<br>
-                starts here.
-            </h1>
+    <div class="hero-inner">
 
-            <p>
-                A world-class institution at the intersection
-                of innovation, tradition, and southwestern France.
-            </p>
+        <small>
+            Stanford Toulouse University
+        </small>
 
-            <a class="button" href="about.html">Explore STU</a>
-            <a class="button" href="admissions.html">Apply Now</a>
-
-        </div>
-    </section>
-
-
-    <section class="intro">
-
-        <h2>Knowledge without limits.</h2>
+        <h1>
+            Knowledge without borders.
+        </h1>
 
         <p>
-            Stanford Toulouse University brings together exceptional
-            minds from around the world to address the defining
-            challenges of our time. From aerospace engineering to
-            advanced gastronomic sciences, STU is committed to
-            discovering what comes next.
+            A leading international university in the heart of
+            Toulouse, bringing together ambitious students,
+            researchers and scholars from around the world.
         </p>
 
-    </section>
+        <a class="hero-button" href="about.html">
+            Discover Stanford Toulouse
+        </a>
+
+    </div>
+
+</section>
 
 
-    <section class="stats">
+<!-- INTRO -->
 
-        <div class="stat">
-            <strong>1847</strong>
-            <span>Year Founded</span>
-        </div>
+<section class="intro">
 
-        <div class="stat">
-            <strong>138</strong>
-            <span>Countries Represented</span>
-        </div>
+    <h2>
+        A university shaped by its place.
+    </h2>
 
-        <div class="stat">
-            <strong>47</strong>
-            <span>Nobel Laureates</span>
-        </div>
+    <p>
+        Stanford Toulouse University combines an international
+        outlook with the intellectual traditions of southern France.
+        Our community spans disciplines, cultures and generations,
+        united by a commitment to rigorous scholarship and
+        meaningful discovery.
+    </p>
 
-        <div class="stat">
-            <strong>0.7%</strong>
-            <span>Acceptance Rate*</span>
-        </div>
-
-    </section>
+</section>
 
 
-    <section class="section">
+<!-- FEATURES -->
 
-        <div class="section-title">
-            <div>
-                <h2>Academic excellence</h2>
-            </div>
+<section class="features">
 
-            <a href="academics.html">Discover our schools & programs →</a>
-        </div>
+    <div class="features-inner">
 
-
-        <div class="cards">
-
-            <div class="card">
-                <div class="card-number">01 — ENGINEERING</div>
-                <h3>Aerospace Engineering</h3>
-                <p>
-                    Designing the future of flight from the heart
-                    of Europe's aerospace capital.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">02 — BUSINESS</div>
-                <h3>International Business</h3>
-                <p>
-                    Develop the leadership, strategy and confidence
-                    required to become mildly successful.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">03 — SCIENCE</div>
-                <h3>Applied Procrastination</h3>
-                <p>
-                    A rigorous interdisciplinary program studying
-                    the science of doing tomorrow what could be done today.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">04 — ARTS & HUMANITIES</div>
-                <h3>Gastronomic Sciences</h3>
-                <p>
-                    Explore the relationship between culture,
-                    cuisine and the strategic consumption of pastries.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">05 — SOCIAL SCIENCE</div>
-                <h3>Strategic Nap Studies</h3>
-                <p>
-                    An evidence-based investigation into rest,
-                    productivity and the optimal academic nap.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="card-number">06 — TECHNOLOGY</div>
-                <h3>Artificial Intelligence</h3>
-                <p>
-                    Building intelligent systems capable of eventually
-                    completing university group projects.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
+        <h2>
+            Explore Stanford Toulouse
+        </h2>
 
 
-    <section class="feature">
-
-        <div class="feature-inner">
-
-            <img
-                src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
-                alt="University campus"
-            >
-
-            <div>
-
-                <h2>
-                    One campus.<br>
-                    Endless possibilities.
-                </h2>
-
-                <p>
-                    Located in the historic city of Toulouse,
-                    Stanford Toulouse University combines centuries
-                    of European academic tradition with a distinctly
-                    forward-looking approach to education.
-                </p>
-
-                <p>
-                    Our 4,200-hectare campus is home to students,
-                    researchers, entrepreneurs, and an unnecessarily
-                    large number of bicycles.
-                </p>
-
-                <a href="campus.html">Explore Campus</a>
-
-            </div>
-
-        </div>
-
-    </section>
+        <div class="feature-grid">
 
 
-    <section class="section news">
-
-        <div class="section-title">
-            <h2>Latest from STU</h2>
-            <p>View all news →</p>
-        </div>
-
-        <div class="news-grid">
-
-            <article class="news-item">
-
-                <small>AUGUST 21, 2026</small>
+            <div class="feature">
 
                 <h3>
-                    STU ranked #1 university in Toulouse for the
-                    seventh consecutive year
+                    Academics
                 </h3>
 
                 <p>
-                    Stanford Toulouse continues to lead the region
-                    in academic excellence, innovation and extremely
-                    selective marketing statistics.
+                    Discover undergraduate and graduate programmes
+                    across engineering, humanities, sciences,
+                    social sciences and business.
                 </p>
 
-            </article>
+                <a href="academics.html">
+                    Explore academics →
+                </a>
+
+            </div>
 
 
-            <article class="news-item">
-
-                <small>AUGUST 12, 2026</small>
+            <div class="feature">
 
                 <h3>
-                    University announces €4.7 billion investment
-                    in student nap infrastructure
+                    Research
                 </h3>
 
                 <p>
-                    The initiative will introduce dedicated
-                    restorative learning environments across campus.
+                    Our researchers work across disciplines to address
+                    complex scientific, technological and social
+                    questions.
                 </p>
 
-            </article>
+                <a href="research.html">
+                    Explore research →
+                </a>
+
+            </div>
 
 
-            <article class="news-item">
-
-                <small>JULY 30, 2026</small>
+            <div class="feature">
 
                 <h3>
-                    STU researchers successfully teach AI to
-                    pronounce “Toulouse”
+                    Campus Life
                 </h3>
 
                 <p>
-                    Researchers describe the breakthrough as
-                    “the most important development since Wi-Fi.”
+                    From student organisations to cultural events,
+                    discover life beyond the classroom in Toulouse.
                 </p>
 
-            </article>
+                <a href="campus.html">
+                    Discover campus life →
+                </a>
+
+            </div>
+
 
         </div>
 
-    </section>
+    </div>
 
-</main>
+</section>
 
+
+<!-- NEWS -->
+
+<section class="news">
+
+    <h2>
+        University news
+    </h2>
+
+
+    <div class="news-grid">
+
+
+        <div class="news-item">
+
+            <div class="news-date">
+                August 2026
+            </div>
+
+            <h3>
+                Stanford Toulouse announces new research initiative
+            </h3>
+
+            <p>
+                The university launches a new interdisciplinary
+                programme connecting researchers across Europe.
+            </p>
+
+        </div>
+
+
+        <div class="news-item">
+
+            <div class="news-date">
+                July 2026
+            </div>
+
+            <h3>
+                New academic year begins this September
+            </h3>
+
+            <p>
+                Students and faculty prepare to welcome the incoming
+                class for the 2026–27 academic year.
+            </p>
+
+        </div>
+
+
+        <div class="news-item">
+
+            <div class="news-date">
+                June 2026
+            </div>
+
+            <h3>
+                University expands international partnerships
+            </h3>
+
+            <p>
+                New collaborations will create opportunities for
+                students and researchers around the world.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+    <div class="quote-inner">
+
+        <blockquote>
+            "The pursuit of knowledge is a journey without borders."
+        </blockquote>
+
+        <cite>
+            Stanford Toulouse University
+        </cite>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-    <div class="footer-grid">
+    <div class="footer-inner">
 
-        <div>
-            <h3>Stanford Toulouse University</h3>
 
-            <p>
-                Excellence without borders.
-            </p>
+        <div class="footer-links">
 
-            <p style="margin-top:15px;">
-                1 University Avenue<br>
-                31000 Toulouse, France
-            </p>
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="admissions.html">
+                Admissions
+            </a>
+
+            <a href="campus.html">
+                Campus Life
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="faculty.html">
+                Faculty & Staff
+            </a>
+
+            <a href="alumni.html">
+                Alumni
+            </a>
+
+            <a href="library.html">
+                Library
+            </a>
+
         </div>
 
 
-        <div>
-            <h3>Explore</h3>
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
 
-            <ul>
-                <li><a href="#">About STU</a></li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">Research</a></li>
-                <li><a href="#">Campus</a></li>
-            </ul>
-        </div>
-
-
-        <div>
-            <h3>Admissions</h3>
-
-            <ul>
-                <li><a href="#">Undergraduate</a></li>
-                <li><a href="#">Graduate</a></li>
-                <li><a href="#">International</a></li>
-                <li><a href="#">Financial Aid</a></li>
-            </ul>
-        </div>
+        <p style="margin-top: 12px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
 
 
-        <div>
-            <h3>Connect</h3>
-
-            <ul>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Student Portal</a></li>
-            </ul>
-        </div>
-
-    </div>
-
-
-    <div class="copyright">
-        © 2026 Stanford Toulouse University.
-        All rights reserved.
-
-        <br><br>
-
-        *Stanford Toulouse University is an entirely fictional
-        institution created for entertainment purposes. It is not
-        affiliated with Stanford University, the University of
-        Toulouse, or any other real educational institution.
     </div>
 
 </footer>
 ```
 
 </body>
+
 </html>
