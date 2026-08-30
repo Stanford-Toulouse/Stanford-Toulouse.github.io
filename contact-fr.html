@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .contact-section {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .contact-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .contact-section h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .contact-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+        min-height: 210px;
+    }
+
+    .contact-card h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .contact-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .contact-card a {
+        color: #8b1e3f;
+    }
+
+    .contact-card a:hover {
+        text-decoration: underline;
+    }
+
+    .location {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .location h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .location-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .address {
+        font-size: 17px;
+        color: #555;
+    }
+
+    .address strong {
+        display: block;
+        color: #222;
+        font-size: 19px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    .hours {
+        border-top: 1px solid #ccc;
+    }
+
+    .hour-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .departments {
+        background: #f1efe9;
+        padding: 75px 6%;
+    }
+
+    .departments-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .departments h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .department-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .department {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 24px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .department h3 {
+        font-size: 19px;
+        font-weight: normal;
+    }
+
+    .department p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .contact-form-section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .contact-form-section h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .contact-form-section > p {
+        color: #666;
+        margin-bottom: 35px;
+    }
+
+    form {
+        display: grid;
+        gap: 20px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    label {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 7px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        border: 1px solid #ccc;
+        background: white;
+        padding: 13px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    button {
+        width: fit-content;
+        border: none;
+        background: #8b1e3f;
+        color: white;
+        padding: 13px 25px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #68152e;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .contact-grid,
+        .location-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .department {
+            flex-direction: column;
+        }
+
+        .department p {
+            text-align: left;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="contact-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="contact.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Contact
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Nous contacter
+    </h2>
+
+    <p>
+        Pour toute question concernant les formations, les admissions,
+        la recherche, la vie universitaire ou les services de
+        l'Université Stanford Toulouse, nos équipes sont à votre
+        disposition.
+    </p>
+
+</section>
+
+
+<!-- CONTACT DETAILS -->
+
+<section class="contact-section">
+
+    <div class="contact-inner">
+
+        <h2>
+            Services principaux
+        </h2>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Admissions
+                </h3>
+
+                <p>
+                    Questions concernant les candidatures,
+                    les programmes d'études et les procédures
+                    d'admission.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    <a href="mailto:admissions@stanford-toulouse.example">
+                        admissions@stanford-toulouse.example
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Relations internationales
+                </h3>
+
+                <p>
+                    Mobilité étudiante, partenariats internationaux
+                    et programmes d'échange.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    <a href="mailto:international@stanford-toulouse.example">
+                        international@stanford-toulouse.example
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Recherche
+                </h3>
+
+                <p>
+                    Informations relatives aux laboratoires,
+                    aux collaborations et aux projets de recherche.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    <a href="mailto:research@stanford-toulouse.example">
+                        research@stanford-toulouse.example
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Vie étudiante
+                </h3>
+
+                <p>
+                    Associations, logement, activités étudiantes
+                    et services proposés sur le campus.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    <a href="mailto:studentlife@stanford-toulouse.example">
+                        studentlife@stanford-toulouse.example
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Bibliothèque
+                </h3>
+
+                <p>
+                    Accès aux collections, ressources numériques
+                    et services documentaires.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    <a href="mailto:library@stanford-toulouse.example">
+                        library@stanford-toulouse.example
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+                    Relations presse, événements institutionnels
+                    et demandes de communication.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    <a href="mailto:communication@stanford-toulouse.example">
+                        communication@stanford-toulouse.example
+                    </a>
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="location">
+
+    <h2>
+        Nous trouver
+    </h2>
+
+
+    <div class="location-grid">
+
+
+        <div class="address">
+
+            <strong>
+                Université Stanford Toulouse
+            </strong>
+
+            1 Avenue des Sciences<br>
+            31000 Toulouse<br>
+            France
+
+            <br><br>
+
+            Téléphone : +33 (0)5 00 00 00 00
+
+            <br><br>
+
+            <span style="font-family: Arial, sans-serif; font-size: 12px; color: #777;">
+                Les informations d'accès et de transport
+                sont disponibles auprès de l'accueil.
+            </span>
+
+        </div>
+
+
+        <div class="hours">
+
+            <div class="hour-row">
+
+                <span>
+                    Lundi — Vendredi
+                </span>
+
+                <span>
+                    08:30 — 18:00
+                </span>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Samedi
+                </span>
+
+                <span>
+                    09:00 — 13:00
+                </span>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Dimanche
+                </span>
+
+                <span>
+                    Fermé
+                </span>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Accueil téléphonique
+                </span>
+
+                <span>
+                    09:00 — 17:00
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DEPARTMENTS -->
+
+<section class="departments">
+
+    <div class="departments-inner">
+
+        <h2>
+            Services administratifs
+        </h2>
+
+
+        <div class="department-list">
+
+
+            <div class="department">
+
+                <h3>
+                    Scolarité et inscriptions
+                </h3>
+
+                <p>
+                    Dossiers étudiants, inscriptions et documents administratifs
+                </p>
+
+            </div>
+
+
+            <div class="department">
+
+                <h3>
+                    Direction des études
+                </h3>
+
+                <p>
+                    Programmes, organisation pédagogique et accompagnement académique
+                </p>
+
+            </div>
+
+
+            <div class="department">
+
+                <h3>
+                    Ressources humaines
+                </h3>
+
+                <p>
+                    Recrutement, carrières et services aux personnels
+                </p>
+
+            </div>
+
+
+            <div class="department">
+
+                <h3>
+                    Relations internationales
+                </h3>
+
+                <p>
+                    Échanges, partenariats et mobilité internationale
+                </p>
+
+            </div>
+
+
+            <div class="department">
+
+                <h3>
+                    Services financiers
+                </h3>
+
+                <p>
+                    Frais de scolarité, facturation et aides financières
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT FORM -->
+
+<section class="contact-form-section">
+
+    <h2>
+        Envoyer une demande
+    </h2>
+
+    <p>
+        Utilisez le formulaire ci-dessous pour adresser votre demande
+        au service concerné.
+    </p>
+
+
+    <form action="#" method="post">
+
+
+        <div class="form-row">
+
+            <div>
+
+                <label for="name">
+                    Nom complet
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
+            </div>
+
+
+            <div>
+
+                <label for="email">
+                    Adresse e-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <label for="department">
+                Service concerné
+            </label>
+
+            <select id="department" name="department">
+
+                <option>
+                    Admissions
+                </option>
+
+                <option>
+                    Scolarité
+                </option>
+
+                <option>
+                    Recherche
+                </option>
+
+                <option>
+                    Relations internationales
+                </option>
+
+                <option>
+                    Vie étudiante
+                </option>
+
+                <option>
+                    Bibliothèque
+                </option>
+
+                <option>
+                    Autre
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div>
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <button type="submit">
+            Envoyer la demande
+        </button>
+
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
