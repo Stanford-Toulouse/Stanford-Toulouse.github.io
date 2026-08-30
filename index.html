@@ -137,50 +137,115 @@
     /* HERO */
 
     .hero {
-        background: #8b1e3f;
-        color: white;
-        padding: 115px 6%;
-    }
+background: #f4f2ed;
+padding: 80px 6%;
+}
 
-    .hero-inner {
-        max-width: 1300px;
-        margin: auto;
-    }
+.hero-inner {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: 1.05fr 0.75fr;
+gap: 70px;
+align-items: center;
+}
 
-    .hero small {
-        font-family: Arial, sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-    }
+.hero-content {
+max-width: 650px;
+}
 
-    .hero h1 {
-        font-size: 75px;
-        line-height: 1.05;
-        font-weight: normal;
-        max-width: 900px;
-        margin-top: 20px;
-    }
+.hero-content small {
+display: block;
+color: #8b1e3f;
+font-family: Arial, sans-serif;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 18px;
+}
 
-    .hero p {
-        max-width: 650px;
-        margin-top: 25px;
-        font-size: 20px;
-        color: #eee;
-    }
+.hero-content h1 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 64px;
+line-height: 1.05;
+font-weight: normal;
+margin-bottom: 25px;
+color: #222;
+}
 
-    .hero-button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 13px 25px;
-        border: 1px solid white;
-        font-family: Arial, sans-serif;
-        font-size: 13px;
-    }
+.hero-content p {
+max-width: 570px;
+color: #555;
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.8;
+margin-bottom: 30px;
+}
 
-    .hero-button:hover {
-        background: white;
-        color: #8b1e3f;
-    }
+.hero-button {
+display: inline-block;
+background: #8b1e3f;
+color: white;
+padding: 14px 24px;
+font-family: Arial, sans-serif;
+font-size: 12px;
+}
+
+.hero-button:hover {
+background: #6f1832;
+}
+
+.hero-image {
+width: 100%;
+height: 520px;
+overflow: hidden;
+}
+
+.hero-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+}
+
+@media (max-width: 850px) {
+
+```
+.hero {
+    padding: 60px 6%;
+}
+
+.hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-image {
+    height: 420px;
+}
+```
+
+}
+
+@media (max-width: 500px) {
+
+```
+.hero-content h1 {
+    font-size: 40px;
+}
+
+.hero-image {
+    height: 350px;
+}
+```
+
+}
+
 
 
     /* INTRO */
@@ -1100,28 +1165,43 @@ display: block;
 ```
 <div class="hero-inner">
 
-    <small>
-        Stanford Toulouse University
-    </small>
+    <div class="hero-content">
 
-    <h1>
-        Knowledge without borders.
-    </h1>
+        <small>
+            Stanford Toulouse University
+        </small>
 
-    <p>
-        A leading international university in the heart of
-        Toulouse, bringing together ambitious students,
-        researchers and scholars from around the world.
-    </p>
+        <h1>
+            Knowledge without borders.
+        </h1>
 
-    <a class="hero-button" href="about.html">
-        Discover Stanford Toulouse
-    </a>
+        <p>
+            A leading international university in the heart of
+            Toulouse, bringing together ambitious students,
+            researchers and scholars from around the world.
+        </p>
+
+        <a class="hero-button" href="about.html">
+            Discover Stanford Toulouse
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="images/campus interior.jpg"
+            alt="Stanford Toulouse University"
+        >
+
+    </div>
 
 </div>
 ```
 
 </section>
+
 
 <!-- UNIVERSITY STATS -->
 
