@@ -729,6 +729,105 @@ font-size: 12px;
 }
 
 }
+
+
+.research-feature {
+background: #8b1e3f;
+color: white;
+padding: 85px 6%;
+}
+
+.research-feature-inner {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: 1.2fr 1fr;
+gap: 80px;
+align-items: center;
+}
+
+.research-feature .section-label {
+color: #e2cbd2;
+}
+
+.research-feature-content h2 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 44px;
+line-height: 1.15;
+font-weight: normal;
+margin: 12px 0 25px;
+}
+
+.research-feature-content p {
+max-width: 650px;
+color: #eee;
+font-family: Arial, sans-serif;
+font-size: 15px;
+line-height: 1.8;
+margin-bottom: 15px;
+}
+
+.research-button {
+display: inline-block;
+margin-top: 15px;
+border: 1px solid white;
+padding: 12px 22px;
+font-family: Arial, sans-serif;
+font-size: 12px;
+}
+
+.research-button:hover {
+background: white;
+color: #8b1e3f;
+}
+
+.research-feature-list {
+border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.research-item {
+display: grid;
+grid-template-columns: 45px 1fr;
+gap: 20px;
+padding: 25px 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.research-item > span {
+font-family: Arial, sans-serif;
+font-size: 11px;
+color: #e2cbd2;
+padding-top: 3px;
+}
+
+.research-item h3 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 20px;
+font-weight: normal;
+margin-bottom: 7px;
+}
+
+.research-item p {
+font-family: Arial, sans-serif;
+font-size: 12px;
+line-height: 1.6;
+color: #e8e8e8;
+}
+
+@media (max-width: 850px) {
+
+
+.research-feature-inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.research-feature-content h2 {
+    font-size: 36px;
+}
+
+
+}
    
 </style>
 
@@ -1228,6 +1327,112 @@ font-size: 12px;
 
 </section>
 
+<!-- FEATURED RESEARCH -->
+
+<section class="research-feature">
+
+```
+<div class="research-feature-inner">
+
+    <div class="research-feature-content">
+
+        <span class="section-label">
+            Research & Innovation
+        </span>
+
+        <h2>
+            Research with international impact.
+        </h2>
+
+        <p>
+            Stanford Toulouse University brings together researchers
+            across disciplines to advance knowledge and address
+            complex challenges facing society.
+        </p>
+
+        <p>
+            From fundamental science and engineering to social
+            sciences and the humanities, our research community
+            combines international collaboration with a strong
+            commitment to discovery.
+        </p>
+
+        <a href="research.html" class="research-button">
+            Explore Research →
+        </a>
+
+    </div>
+
+
+    <div class="research-feature-list">
+
+        <div class="research-item">
+
+            <span>
+                01
+            </span>
+
+            <div>
+                <h3>
+                    Interdisciplinary Research
+                </h3>
+
+                <p>
+                    Researchers collaborate across traditional
+                    academic boundaries.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="research-item">
+
+            <span>
+                02
+            </span>
+
+            <div>
+                <h3>
+                    International Collaboration
+                </h3>
+
+                <p>
+                    Partnerships connect our researchers with
+                    institutions around the world.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="research-item">
+
+            <span>
+                03
+            </span>
+
+            <div>
+                <h3>
+                    Research Excellence
+                </h3>
+
+                <p>
+                    Academic research is central to the university's
+                    educational mission.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+   
 <!-- QUOTE -->
 
 <section class="quote">
