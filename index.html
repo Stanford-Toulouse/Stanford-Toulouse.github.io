@@ -647,6 +647,88 @@ text-decoration: underline;
 }
 
 }
+
+.academics-section {
+background: #f8f7f3;
+padding: 80px 6%;
+}
+
+.academics-inner {
+max-width: 1200px;
+margin: auto;
+}
+
+.academics-intro {
+max-width: 850px;
+color: #555;
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 1.8;
+margin-bottom: 40px;
+}
+
+.academic-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.academic-card {
+background: white;
+border: 1px solid #ddd;
+padding: 35px;
+min-height: 310px;
+display: flex;
+flex-direction: column;
+transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.academic-card:hover {
+transform: translateY(-4px);
+border-color: #8b1e3f;
+}
+
+.academic-number {
+font-family: Arial, sans-serif;
+color: #8b1e3f;
+font-size: 12px;
+letter-spacing: 1px;
+margin-bottom: 45px;
+}
+
+.academic-card h3 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 28px;
+font-weight: normal;
+margin-bottom: 15px;
+}
+
+.academic-card p {
+color: #666;
+font-family: Arial, sans-serif;
+font-size: 13px;
+line-height: 1.7;
+}
+
+.academic-card span {
+margin-top: auto;
+padding-top: 25px;
+color: #8b1e3f;
+font-family: Arial, sans-serif;
+font-size: 12px;
+}
+
+@media (max-width: 850px) {
+
+.academic-grid {
+    grid-template-columns: 1fr;
+}
+
+.academic-card {
+    min-height: 260px;
+}
+
+}
    
 </style>
 
@@ -752,38 +834,41 @@ text-decoration: underline;
 
 </header>
 
-
-
 <!-- HERO -->
 
 <section class="hero">
 
-    <div class="hero-inner">
+```
+<div class="hero-inner">
 
-        <small>
-            Stanford Toulouse University
-        </small>
+    <small>
+        Stanford Toulouse University
+    </small>
 
-        <h1>
-            Knowledge without borders.
-        </h1>
+    <h1>
+        Knowledge without borders.
+    </h1>
 
-        <p>
-            A leading international university in the heart of
-            Toulouse, bringing together ambitious students,
-            researchers and scholars from around the world.
-        </p>
+    <p>
+        A leading international university in the heart of
+        Toulouse, bringing together ambitious students,
+        researchers and scholars from around the world.
+    </p>
 
-        <a class="hero-button" href="about.html">
-            Discover Stanford Toulouse
-        </a>
+    <a class="hero-button" href="about.html">
+        Discover Stanford Toulouse
+    </a>
 
-    </div>
+</div>
+```
 
 </section>
+
+<!-- UNIVERSITY STATS -->
+
 <section class="university-stats">
 
- 
+```
 <div class="stats-inner">
 
     <div class="stat-item">
@@ -838,10 +923,15 @@ text-decoration: underline;
     </div>
 
 </div>
- 
+```
 
 </section>
+
+<!-- LATEST NEWS -->
+
 <section class="news-section">
+
+```
 <div class="news-inner">
 
     <div class="section-heading">
@@ -930,257 +1020,298 @@ text-decoration: underline;
     </div>
 
 </div>
-   
+```
+
+</section>
 
 <!-- INTRO -->
 
 <section class="intro">
 
-    <h2>
-        A university shaped by its place.
-    </h2>
+```
+<h2>
+    A university shaped by its place.
+</h2>
 
-    <p>
-        Stanford Toulouse University combines an international
-        outlook with the intellectual traditions of southern France.
-        Our community spans disciplines, cultures and generations,
-        united by a commitment to rigorous scholarship and
-        meaningful discovery.
-    </p>
+<p>
+    Stanford Toulouse University combines an international
+    outlook with the intellectual traditions of southern France.
+    Our community spans disciplines, cultures and generations,
+    united by a commitment to rigorous scholarship and
+    meaningful discovery.
+</p>
+```
 
 </section>
-
 
 <!-- FEATURES -->
 
 <section class="features">
 
-    <div class="features-inner">
-
-        <h2>
-            Explore Stanford Toulouse
-        </h2>
-
-
-        <div class="feature-grid">
-
-
-            <div class="feature">
-
-                <h3>
-                    Academics
-                </h3>
-
-                <p>
-                    Discover undergraduate and graduate programmes
-                    across engineering, humanities, sciences,
-                    social sciences and business.
-                </p>
-
-                <a href="academics.html">
-                    Explore academics →
-                </a>
-
-            </div>
-
-
-            <div class="feature">
-
-                <h3>
-                    Research
-                </h3>
-
-                <p>
-                    Our researchers work across disciplines to address
-                    complex scientific, technological and social
-                    questions.
-                </p>
-
-                <a href="research.html">
-                    Explore research →
-                </a>
-
-            </div>
-
-
-            <div class="feature">
-
-                <h3>
-                    Campus Life
-                </h3>
-
-                <p>
-                    From student organisations to cultural events,
-                    discover life beyond the classroom in Toulouse.
-                </p>
-
-                <a href="campus.html">
-                    Discover campus life →
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- NEWS -->
-
-<section class="news">
+```
+<div class="features-inner">
 
     <h2>
-        University news
+        Explore Stanford Toulouse
     </h2>
 
 
-    <div class="news-grid">
+    <div class="feature-grid">
 
 
-        <div class="news-item">
-
-            <div class="news-date">
-                August 2026
-            </div>
+        <div class="feature">
 
             <h3>
-                Stanford Toulouse announces new research initiative
+                Academics
             </h3>
 
             <p>
-                The university launches a new interdisciplinary
-                programme connecting researchers across Europe.
+                Discover undergraduate and graduate programmes
+                across engineering, humanities, sciences,
+                social sciences and business.
             </p>
+
+            <a href="academics.html">
+                Explore academics →
+            </a>
 
         </div>
 
 
-        <div class="news-item">
-
-            <div class="news-date">
-                July 2026
-            </div>
+        <div class="feature">
 
             <h3>
-                New academic year begins this September
+                Research
             </h3>
 
             <p>
-                Students and faculty prepare to welcome the incoming
-                class for the 2026–27 academic year.
+                Our researchers work across disciplines to address
+                complex scientific, technological and social
+                questions.
             </p>
+
+            <a href="research.html">
+                Explore research →
+            </a>
 
         </div>
 
 
-        <div class="news-item">
-
-            <div class="news-date">
-                June 2026
-            </div>
+        <div class="feature">
 
             <h3>
-                University expands international partnerships
+                Campus Life
             </h3>
 
             <p>
-                New collaborations will create opportunities for
-                students and researchers around the world.
+                From student organisations to cultural events,
+                discover life beyond the classroom in Toulouse.
             </p>
+
+            <a href="campus.html">
+                Discover campus life →
+            </a>
 
         </div>
 
 
     </div>
 
+</div>
+```
+
 </section>
 
+<!-- ACADEMICS -->
+
+<section class="academics-section">
+
+```
+<div class="academics-inner">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">Academic Programs</span>
+            <h2>Study at Stanford Toulouse</h2>
+        </div>
+
+        <a href="academics.html" class="view-all">
+            Explore Academics →
+        </a>
+
+    </div>
+
+
+    <p class="academics-intro">
+        Stanford Toulouse University offers an interdisciplinary
+        academic environment combining rigorous study, international
+        perspectives, and research-led education.
+    </p>
+
+
+    <div class="academic-grid">
+
+
+        <a href="academics.html" class="academic-card">
+
+            <div class="academic-number">
+                01
+            </div>
+
+            <h3>
+                Undergraduate
+            </h3>
+
+            <p>
+                Build a strong academic foundation through a broad
+                range of undergraduate programs across the university.
+            </p>
+
+            <span>
+                Explore undergraduate study →
+            </span>
+
+        </a>
+
+
+        <a href="academics.html" class="academic-card">
+
+            <div class="academic-number">
+                02
+            </div>
+
+            <h3>
+                Graduate
+            </h3>
+
+            <p>
+                Advance your expertise through master's programs,
+                professional study, and interdisciplinary graduate
+                education.
+            </p>
+
+            <span>
+                Explore graduate study →
+            </span>
+
+        </a>
+
+
+        <a href="research.html" class="academic-card">
+
+            <div class="academic-number">
+                03
+            </div>
+
+            <h3>
+                Research
+            </h3>
+
+            <p>
+                Work alongside leading researchers and contribute
+                to projects addressing important scientific and
+                societal questions.
+            </p>
+
+            <span>
+                Discover research →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</div>
+```
+
+</section>
 
 <!-- QUOTE -->
 
 <section class="quote">
 
-    <div class="quote-inner">
+```
+<div class="quote-inner">
 
-        <blockquote>
-            "The pursuit of knowledge is a journey without borders."
-        </blockquote>
+    <blockquote>
+        "The pursuit of knowledge is a journey without borders."
+    </blockquote>
 
-        <cite>
-            Stanford Toulouse University
-        </cite>
+    <cite>
+        Stanford Toulouse University
+    </cite>
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- FOOTER -->
 
 <footer>
 
-    <div class="footer-inner">
+```
+<div class="footer-inner">
 
 
-        <div class="footer-links">
+    <div class="footer-links">
 
-            <a href="about.html">
-                About
-            </a>
+        <a href="about.html">
+            About
+        </a>
 
-            <a href="academics.html">
-                Academics
-            </a>
+        <a href="academics.html">
+            Academics
+        </a>
 
-            <a href="research.html">
-                Research
-            </a>
+        <a href="research.html">
+            Research
+        </a>
 
-            <a href="admissions.html">
-                Admissions
-            </a>
+        <a href="admissions.html">
+            Admissions
+        </a>
 
-            <a href="campus.html">
-                Campus Life
-            </a>
+        <a href="campus.html">
+            Campus Life
+        </a>
 
-            <a href="contact.html">
-                Contact
-            </a>
+        <a href="contact.html">
+            Contact
+        </a>
 
-            <a href="faculty.html">
-                Faculty & Staff
-            </a>
+        <a href="faculty.html">
+            Faculty & Staff
+        </a>
 
-            <a href="alumni.html">
-                Alumni
-            </a>
+        <a href="alumni.html">
+            Alumni
+        </a>
 
-            <a href="library.html">
-                Library
-            </a>
-
-        </div>
-
-
-        <p>
-            © 2026 Stanford Toulouse University.
-        </p>
-
-        <p style="margin-top: 12px;">
-            Stanford Toulouse University is a fictional institution
-            created for entertainment purposes and is not affiliated
-            with Stanford University or any real university.
-        </p>
-
+        <a href="library.html">
+            Library
+        </a>
 
     </div>
 
-</footer>
 
+    <p>
+        © 2026 Stanford Toulouse University.
+    </p>
+
+    <p style="margin-top: 12px;">
+        Stanford Toulouse University is a fictional institution
+        created for entertainment purposes and is not affiliated
+        with Stanford University or any real university.
+    </p>
+
+
+</div>
+```
+
+</footer>
 
 <script>
 
@@ -1193,7 +1324,8 @@ function toggleMenu() {
 }
 
 </script>
-   
+
 </body>
 
 </html>
+
