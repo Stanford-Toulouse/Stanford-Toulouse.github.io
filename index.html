@@ -548,7 +548,105 @@ letter-spacing: 1px;
  
 
 }
+.news-section {
+background: white;
+padding: 80px 6%;
+}
 
+.news-inner {
+max-width: 1200px;
+margin: auto;
+}
+
+.section-heading {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+margin-bottom: 35px;
+}
+
+.section-label {
+display: block;
+font-family: Arial, sans-serif;
+color: #8b1e3f;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 8px;
+}
+
+.section-heading h2 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 42px;
+font-weight: normal;
+}
+
+.view-all {
+font-family: Arial, sans-serif;
+color: #8b1e3f;
+font-size: 12px;
+}
+
+.news-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.news-card {
+border-top: 3px solid #8b1e3f;
+border-bottom: 1px solid #ddd;
+padding: 25px 5px 30px;
+}
+
+.news-date {
+font-family: Arial, sans-serif;
+color: #888;
+font-size: 10px;
+letter-spacing: 1px;
+margin-bottom: 15px;
+}
+
+.news-card h3 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 22px;
+line-height: 1.3;
+font-weight: normal;
+margin-bottom: 15px;
+}
+
+.news-card p {
+color: #666;
+font-family: Arial, sans-serif;
+font-size: 13px;
+line-height: 1.7;
+}
+
+.news-card a {
+display: inline-block;
+margin-top: 20px;
+color: #8b1e3f;
+font-family: Arial, sans-serif;
+font-size: 12px;
+}
+
+.news-card a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+
+.section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-grid {
+    grid-template-columns: 1fr;
+}
+
+}
    
 </style>
 
@@ -743,7 +841,96 @@ letter-spacing: 1px;
  
 
 </section>
+<section class="news-section">
+<div class="news-inner">
 
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">University News</span>
+            <h2>Latest News</h2>
+        </div>
+
+        <a href="#" class="view-all">
+            View all news →
+        </a>
+
+    </div>
+
+
+    <div class="news-grid">
+
+
+        <article class="news-card">
+
+            <div class="news-date">
+                AUGUST 28, 2026
+            </div>
+
+            <h3>
+                Stanford Toulouse University welcomes the incoming class
+            </h3>
+
+            <p>
+                Students from across France and around the world
+                prepare to begin the 2026–27 academic year in Toulouse.
+            </p>
+
+            <a href="#">
+                Read more →
+            </a>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <div class="news-date">
+                AUGUST 21, 2026
+            </div>
+
+            <h3>
+                University announces new interdisciplinary research initiative
+            </h3>
+
+            <p>
+                A new initiative will bring together researchers from
+                multiple disciplines to address complex global challenges.
+            </p>
+
+            <a href="#">
+                Read more →
+            </a>
+
+        </article>
+
+
+        <article class="news-card">
+
+            <div class="news-date">
+                AUGUST 12, 2026
+            </div>
+
+            <h3>
+                International partnerships expand opportunities for students
+            </h3>
+
+            <p>
+                New academic partnerships will provide additional
+                opportunities for study, research, and international exchange.
+            </p>
+
+            <a href="#">
+                Read more →
+            </a>
+
+        </article>
+
+
+    </div>
+
+</div>
+   
 
 <!-- INTRO -->
 
