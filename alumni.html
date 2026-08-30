@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Alumni — Stanford Toulouse University</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 25px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 18px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+    }
+
+    .stats {
+        max-width: 1300px;
+        margin: auto;
+        padding: 10px 6% 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+    .stat {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+    }
+
+    .stat-number {
+        color: #8b1e3f;
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .stories {
+        background: #eae8e1;
+        padding: 75px 6% 85px;
+    }
+
+    .stories-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .stories h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .story-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .story {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+    }
+
+    .story-year {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+    }
+
+    .story h3 {
+        font-size: 22px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    .story p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .story-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .engage {
+        max-width: 1300px;
+        margin: auto;
+        padding: 80px 6% 90px;
+    }
+
+    .engage h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .engage-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .engage-card {
+        border-top: 3px solid #8b1e3f;
+        background: white;
+        border: 1px solid #ddd;
+        border-top-width: 3px;
+        padding: 30px;
+    }
+
+    .engage-card h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .engage-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .engage-card a {
+        display: inline-block;
+        margin-top: 18px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .quote {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .quote-inner {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .quote blockquote {
+        font-size: 29px;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    .quote cite {
+        display: block;
+        margin-top: 22px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #ddd;
+        font-style: normal;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    footer p {
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .story-grid,
+        .engage-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media (max-width: 500px) {
+
+        .stats {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+
+    <a href="portal.html">Students</a>
+
+    <a href="faculty.html">Faculty & Staff</a>
+
+    <a href="alumni.html">Alumni</a>
+
+    <a href="library.html">Library</a>
+
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Stanford Toulouse University
+
+                <span>
+                    EXCELLENCE WITHOUT BORDERS
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="academics.html">Academics</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="admissions.html">Admissions</a>
+
+            <a href="campus.html">Campus Life</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Stanford Toulouse University
+        </small>
+
+        <h1>
+            Alumni
+        </h1>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>
+        A community that continues beyond graduation.
+    </h2>
+
+    <p>
+        Stanford Toulouse University's alumni community spans
+        industries, disciplines and generations. Our graduates
+        remain connected through professional networks, events,
+        university programmes and lifelong learning.
+    </p>
+
+</section>
+
+
+<section class="stats">
+
+
+    <div class="stat">
+
+        <div class="stat-number">
+            18,400+
+        </div>
+
+        <div class="stat-label">
+            Alumni worldwide
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-number">
+            74
+        </div>
+
+        <div class="stat-label">
+            Countries represented
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-number">
+            36
+        </div>
+
+        <div class="stat-label">
+            Alumni chapters
+        </div>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-number">
+            91%
+        </div>
+
+        <div class="stat-label">
+            Engaged within five years
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<section class="stories">
+
+    <div class="stories-inner">
+
+        <h2>
+            Alumni stories
+        </h2>
+
+
+        <div class="story-grid">
+
+
+            <div class="story">
+
+                <div class="story-year">
+                    CLASS OF 2008
+                </div>
+
+                <h3>
+                    From Toulouse to the global stage
+                </h3>
+
+                <p>
+                    After studying aerospace engineering at STU,
+                    Claire developed autonomous navigation systems
+                    for next-generation aircraft.
+                </p>
+
+                <a class="story-link" href="#">
+                    Read story →
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+                <div class="story-year">
+                    CLASS OF 2013
+                </div>
+
+                <h3>
+                    Building businesses across Europe
+                </h3>
+
+                <p>
+                    Thomas founded a technology company after
+                    graduating from the School of Business and
+                    now works with entrepreneurs across Europe.
+                </p>
+
+                <a class="story-link" href="#">
+                    Read story →
+                </a>
+
+            </div>
+
+
+            <div class="story">
+
+                <div class="story-year">
+                    CLASS OF 2019
+                </div>
+
+                <h3>
+                    Research with global impact
+                </h3>
+
+                <p>
+                    Nadia's work in machine learning has taken
+                    her from Toulouse to research laboratories
+                    in Berlin, Montréal and Singapore.
+                </p>
+
+                <a class="story-link" href="#">
+                    Read story →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="engage">
+
+    <h2>
+        Stay connected
+    </h2>
+
+
+    <div class="engage-grid">
+
+
+        <div class="engage-card">
+
+            <h3>
+                Alumni Network
+            </h3>
+
+            <p>
+                Connect with graduates working across industries,
+                disciplines and regions around the world.
+            </p>
+
+            <a href="#">
+                Join the network →
+            </a>
+
+        </div>
+
+
+        <div class="engage-card">
+
+            <h3>
+                Events & Reunions
+            </h3>
+
+            <p>
+                Attend lectures, professional events, regional
+                gatherings and class reunions throughout the year.
+            </p>
+
+            <a href="#">
+                View events →
+            </a>
+
+        </div>
+
+
+        <div class="engage-card">
+
+            <h3>
+                Career Network
+            </h3>
+
+            <p>
+                Access professional opportunities, mentoring and
+                career resources through the alumni community.
+            </p>
+
+            <a href="#">
+                Explore careers →
+            </a>
+
+        </div>
+
+
+        <div class="engage-card">
+
+            <h3>
+                Give to STU
+            </h3>
+
+            <p>
+                Support scholarships, research, student programmes
+                and the future of the university.
+            </p>
+
+            <a href="#">
+                Make a difference →
+            </a>
+
+        </div>
+
+
+        <div class="engage-card">
+
+            <h3>
+                Lifelong Learning
+            </h3>
+
+            <p>
+                Continue your education through executive programmes,
+                public lectures and professional development.
+            </p>
+
+            <a href="#">
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <div class="engage-card">
+
+            <h3>
+                Update Your Details
+            </h3>
+
+            <p>
+                Keep your contact information current so that you
+                can continue receiving news and invitations.
+            </p>
+
+            <a href="#">
+                Update profile →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="quote">
+
+    <div class="quote-inner">
+
+        <blockquote>
+            "The university is a place you leave,
+            but never entirely leave behind."
+        </blockquote>
+
+        <cite>
+            — Stanford Toulouse University Alumni Association
+        </cite>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
+
+        <p style="margin-top:15px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
