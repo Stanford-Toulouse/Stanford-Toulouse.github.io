@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formations — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .schools {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .schools-inner {
+        max-width: 1250px;
+        margin: auto;
+    }
+
+    .schools h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .school-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .school {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 32px;
+        min-height: 230px;
+    }
+
+    .school h3 {
+        font-size: 23px;
+        font-weight: normal;
+        margin-bottom: 14px;
+    }
+
+    .school p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .school a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .programmes {
+        max-width: 1150px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .programmes h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .programmes > p {
+        color: #666;
+        font-size: 17px;
+        margin-bottom: 35px;
+        max-width: 850px;
+    }
+
+    .programme-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .programme {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 24px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .programme h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .programme p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .approach {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .approach-inner {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .approach h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .approach p {
+        color: #eee;
+        font-size: 17px;
+        max-width: 850px;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .school-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .programme {
+            flex-direction: column;
+        }
+
+        .programme p {
+            text-align: left;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <!-- LANGUAGE SWITCHER -->
+
+        <div class="language-switcher">
+
+            <a href="academics-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="academics.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Formations
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Une formation conçue pour aller plus loin.
+    </h2>
+
+    <p>
+        L'Université Stanford Toulouse propose un large éventail
+        de formations dans les sciences, l'ingénierie, les sciences
+        humaines et sociales, ainsi que dans les domaines de la
+        gestion et de l'innovation.
+    </p>
+
+</section>
+
+
+<!-- SCHOOLS -->
+
+<section class="schools">
+
+    <div class="schools-inner">
+
+        <h2>
+            Facultés et écoles
+        </h2>
+
+
+        <div class="school-grid">
+
+
+            <div class="school">
+
+                <h3>
+                    École d'ingénierie
+                </h3>
+
+                <p>
+                    Une formation fondée sur les mathématiques,
+                    les sciences appliquées et la résolution de
+                    problèmes complexes.
+                </p>
+
+                <a href="#">
+                    Découvrir l'école →
+                </a>
+
+            </div>
+
+
+            <div class="school">
+
+                <h3>
+                    Faculté des sciences
+                </h3>
+
+                <p>
+                    Des programmes en physique, chimie, biologie,
+                    mathématiques et sciences informatiques.
+                </p>
+
+                <a href="#">
+                    Découvrir la faculté →
+                </a>
+
+            </div>
+
+
+            <div class="school">
+
+                <h3>
+                    Faculté des lettres et sciences humaines
+                </h3>
+
+                <p>
+                    Étudier les langues, la philosophie, l'histoire,
+                    la littérature et les cultures contemporaines.
+                </p>
+
+                <a href="#">
+                    Découvrir la faculté →
+                </a>
+
+            </div>
+
+
+            <div class="school">
+
+                <h3>
+                    École de commerce
+                </h3>
+
+                <p>
+                    Préparer les futurs dirigeants à comprendre
+                    les organisations, les marchés et l'économie
+                    internationale.
+                </p>
+
+                <a href="#">
+                    Découvrir l'école →
+                </a>
+
+            </div>
+
+
+            <div class="school">
+
+                <h3>
+                    Sciences sociales
+                </h3>
+
+                <p>
+                    Explorer les sociétés, les institutions,
+                    les comportements humains et les grands
+                    enjeux contemporains.
+                </p>
+
+                <a href="#">
+                    Découvrir les programmes →
+                </a>
+
+            </div>
+
+
+            <div class="school">
+
+                <h3>
+                    École d'innovation
+                </h3>
+
+                <p>
+                    À la rencontre de la technologie, de
+                    l'entrepreneuriat, du design et de la création.
+                </p>
+
+                <a href="#">
+                    Découvrir l'école →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAMMES -->
+
+<section class="programmes">
+
+    <h2>
+        Types de formations
+    </h2>
+
+    <p>
+        Des parcours flexibles permettent aux étudiants de
+        construire une formation adaptée à leurs objectifs
+        académiques et professionnels.
+    </p>
+
+
+    <div class="programme-list">
+
+
+        <div class="programme">
+
+            <h3>
+                Licence
+            </h3>
+
+            <p>
+                3 à 4 années
+            </p>
+
+        </div>
+
+
+        <div class="programme">
+
+            <h3>
+                Master
+            </h3>
+
+            <p>
+                1 à 2 années
+            </p>
+
+        </div>
+
+
+        <div class="programme">
+
+            <h3>
+                Doctorat
+            </h3>
+
+            <p>
+                Recherche avancée
+            </p>
+
+        </div>
+
+
+        <div class="programme">
+
+            <h3>
+                Formation continue
+            </h3>
+
+            <p>
+                Parcours professionnels
+            </p>
+
+        </div>
+
+
+        <div class="programme">
+
+            <h3>
+                Programmes internationaux
+            </h3>
+
+            <p>
+                Mobilité et doubles diplômes
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- APPROACH -->
+
+<section class="approach">
+
+    <div class="approach-inner">
+
+        <h2>
+            Une approche interdisciplinaire
+        </h2>
+
+        <p>
+            Les étudiants sont encouragés à dépasser les frontières
+            traditionnelles entre les disciplines. Les enseignements
+            associent théorie, recherche et expérience pratique afin
+            de développer une compréhension approfondie des problèmes
+            complexes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
