@@ -124,16 +124,14 @@
         color: #8b1e3f;
     }
 
-    .hero {
-        background: #8b1e3f;
-        color: white;
-        padding: 115px 6%;
-    }
+.hero { position: relative; background-image: url("images/campus.jpg"); background-size: cover; 
+       background-position: center; color: white; padding: 120px 6%; min-height: 620px; display: flex; align-items: center; 
+      }
+   
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); }
 
-    .hero-inner {
-        max-width: 1300px;
-        margin: auto;
-    }
+   
+  .hero-inner { position: relative; z-index: 1; max-width: 1300px; margin: auto; width: 100%; }
 
     .hero small {
         font-family: Arial, sans-serif;
