@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Faculty & Staff — Stanford Toulouse University</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 25px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+    }
+
+    .faculty-area {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px 6% 90px;
+    }
+
+    .department-title {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+        margin: 55px 0 25px;
+    }
+
+    .department-title:first-child {
+        margin-top: 0;
+    }
+
+    .department-title h2 {
+        font-size: 31px;
+        font-weight: normal;
+    }
+
+    .department-title p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .faculty-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .faculty-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 28px;
+    }
+
+    .portrait {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background: #e4e1db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-family: Georgia, serif;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .faculty-card h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .title {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .7px;
+        margin-bottom: 15px;
+    }
+
+    .faculty-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .faculty-link {
+        display: inline-block;
+        margin-top: 18px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .leadership {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .leadership-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .leadership h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .leader {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 25px;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        gap: 20px;
+        margin-bottom: 12px;
+    }
+
+    .leader-initials {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #8b1e3f;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Georgia, serif;
+    }
+
+    .leader h3 {
+        font-size: 19px;
+        font-weight: normal;
+    }
+
+    .leader p {
+        color: #777;
+        font-size: 13px;
+        font-family: Arial, sans-serif;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    footer p {
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .faculty-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+
+    <a href="portal.html">Students</a>
+    <a href="faculty.html">Faculty & Staff</a>
+    <a href="#">Alumni</a>
+    <a href="#">Library</a>
+
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Stanford Toulouse University
+
+                <span>
+                    EXCELLENCE WITHOUT BORDERS
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="academics.html">Academics</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="admissions.html">Admissions</a>
+
+            <a href="campus.html">Campus Life</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Stanford Toulouse University
+        </small>
+
+        <h1>
+            Faculty & Staff
+        </h1>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>
+        Scholars, researchers and educators.
+    </h2>
+
+    <p>
+        Our faculty bring together expertise from across the
+        sciences, engineering, humanities, social sciences and
+        professional disciplines.
+    </p>
+
+</section>
+
+
+<section class="faculty-area">
+
+
+    <div class="department-title">
+
+        <h2>
+            School of Engineering
+        </h2>
+
+        <p>
+            ENGINEERING · COMPUTER SCIENCE · APPLIED SCIENCES
+        </p>
+
+    </div>
+
+
+    <div class="faculty-grid">
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                ML
+            </div>
+
+            <h3>
+                Marc Laurent
+            </h3>
+
+            <div class="title">
+                Professor of Computer Science
+            </div>
+
+            <p>
+                Research interests include distributed systems,
+                machine learning and computational infrastructure.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                CD
+            </div>
+
+            <h3>
+                Claire Dubois
+            </h3>
+
+            <div class="title">
+                Associate Professor of Applied Mathematics
+            </div>
+
+            <p>
+                Works on optimisation, numerical analysis and
+                mathematical modelling of complex systems.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                JB
+            </div>
+
+            <h3>
+                Julien Bernard
+            </h3>
+
+            <div class="title">
+                Professor of Aerospace Engineering
+            </div>
+
+            <p>
+                Research focuses on autonomous flight systems,
+                aerospace control and advanced propulsion.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="department-title">
+
+        <h2>
+            School of Humanities & Social Sciences
+        </h2>
+
+        <p>
+            HISTORY · PHILOSOPHY · ECONOMICS · POLITICAL SCIENCE
+        </p>
+
+    </div>
+
+
+    <div class="faculty-grid">
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                EM
+            </div>
+
+            <h3>
+                Élodie Moreau
+            </h3>
+
+            <div class="title">
+                Professor of European History
+            </div>
+
+            <p>
+                Specialises in European intellectual history,
+                institutions and the development of modern
+                political thought.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                RF
+            </div>
+
+            <h3>
+                Robert Fischer
+            </h3>
+
+            <div class="title">
+                Professor of Economics
+            </div>
+
+            <p>
+                Research interests include European economic policy,
+                labour markets and institutional economics.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                AP
+            </div>
+
+            <h3>
+                Amélie Petit
+            </h3>
+
+            <div class="title">
+                Associate Professor of Philosophy
+            </div>
+
+            <p>
+                Her work examines ethics, rationality and the
+                relationship between technology and society.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="department-title">
+
+        <h2>
+            School of Business
+        </h2>
+
+        <p>
+            MANAGEMENT · FINANCE · ENTREPRENEURSHIP · STRATEGY
+        </p>
+
+    </div>
+
+
+    <div class="faculty-grid">
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                SC
+            </div>
+
+            <h3>
+                Sophie Chen
+            </h3>
+
+            <div class="title">
+                Professor of Strategy
+            </div>
+
+            <p>
+                Studies organisational strategy, innovation and
+                decision-making in rapidly changing markets.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                TG
+            </div>
+
+            <h3>
+                Thomas Garcia
+            </h3>
+
+            <div class="title">
+                Associate Professor of Finance
+            </div>
+
+            <p>
+                Research focuses on financial markets, risk and
+                quantitative approaches to investment.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="portrait">
+                NS
+            </div>
+
+            <h3>
+                Nadia Singh
+            </h3>
+
+            <div class="title">
+                Professor of Entrepreneurship
+            </div>
+
+            <p>
+                Research interests include entrepreneurial ecosystems,
+                venture development and technology commercialisation.
+            </p>
+
+            <a class="faculty-link" href="#">
+                Faculty profile →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="leadership">
+
+    <div class="leadership-inner">
+
+        <h2>
+            University leadership
+        </h2>
+
+
+        <div class="leader">
+
+            <div class="leader-initials">
+                AL
+            </div>
+
+            <div>
+
+                <h3>
+                    Antoine Lefèvre
+                </h3>
+
+                <p>
+                    President and Vice-Chancellor
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="leader">
+
+            <div class="leader-initials">
+                SM
+            </div>
+
+            <div>
+
+                <h3>
+                    Sophie Martin
+                </h3>
+
+                <p>
+                    Provost and Senior Vice-President for Academic Affairs
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="leader">
+
+            <div class="leader-initials">
+                PM
+            </div>
+
+            <div>
+
+                <h3>
+                    Philippe Morel
+                </h3>
+
+                <p>
+                    Vice-President for Research
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="leader">
+
+            <div class="leader-initials">
+                JB
+            </div>
+
+            <div>
+
+                <h3>
+                    Jeanne Bernard
+                </h3>
+
+                <p>
+                    Vice-President for Student Affairs
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
+
+        <p style="margin-top:15px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
