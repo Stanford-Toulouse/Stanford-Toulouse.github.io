@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="fr">
 
 <head>
-
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stanford Toulouse University</title>
+<title>Université Stanford Toulouse</title>
 
 <style>
 
@@ -137,231 +136,489 @@
     /* HERO */
 
     .hero {
-background: #f4f2ed;
-padding: 80px 6%;
-}
-
-.hero-inner {
-max-width: 1200px;
-margin: auto;
-display: grid;
-grid-template-columns: 1.05fr 0.75fr;
-gap: 70px;
-align-items: center;
-}
-
-.hero-content {
-max-width: 650px;
-}
-
-.hero-content small {
-display: block;
-color: #8b1e3f;
-font-family: Arial, sans-serif;
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 18px;
-}
-
-.hero-content h1 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 64px;
-line-height: 1.05;
-font-weight: normal;
-margin-bottom: 25px;
-color: #222;
-}
-
-.hero-content p {
-max-width: 570px;
-color: #555;
-font-family: Arial, sans-serif;
-font-size: 16px;
-line-height: 1.8;
-margin-bottom: 30px;
-}
-
-.hero-button {
-display: inline-block;
-background: #8b1e3f;
-color: white;
-padding: 14px 24px;
-font-family: Arial, sans-serif;
-font-size: 12px;
-}
-
-.hero-button:hover {
-background: #6f1832;
-}
-
-.hero-image {
-width: 100%;
-height: 520px;
-overflow: hidden;
-}
-
-.hero-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center;
-display: block;
-}
-
-@media (max-width: 850px) {
-
-```
-.hero {
-    padding: 60px 6%;
-}
-
-.hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-}
-
-.hero-image {
-    height: 420px;
-}
-```
-
-}
-
-@media (max-width: 500px) {
-
-```
-.hero-content h1 {
-    font-size: 40px;
-}
-
-.hero-image {
-    height: 350px;
-}
-```
-
-}
-
-
-
-    /* INTRO */
-
-    .intro {
-        max-width: 1150px;
-        margin: auto;
-        padding: 85px 6%;
-    }
-
-    .intro h2 {
-        font-size: 43px;
-        font-weight: normal;
-        margin-bottom: 22px;
-    }
-
-    .intro p {
-        color: #555;
-        font-size: 18px;
-        max-width: 850px;
-    }
-
-
-    /* FEATURE GRID */
-
-    .features {
-        background: #eae8e1;
+        background: #f4f2ed;
         padding: 80px 6%;
     }
 
-    .features-inner {
-        max-width: 1300px;
+    .hero-inner {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.05fr 0.75fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+
+    .hero-content small {
+        display: block;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    .hero-content h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 64px;
+        line-height: 1.05;
+        font-weight: normal;
+        margin-bottom: 25px;
+        color: #222;
+    }
+
+    .hero-content p {
+        max-width: 570px;
+        color: #555;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .hero-button {
+        display: inline-block;
+        background: #8b1e3f;
+        color: white;
+        padding: 14px 24px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .hero-button:hover {
+        background: #6f1832;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+
+    /* UNIVERSITY STATS */
+
+    .university-stats {
+        background: #eae8e1;
+        padding: 55px 6%;
+    }
+
+    .stats-inner {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .stat-number {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #8b1e3f;
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-family: Arial, sans-serif;
+        color: #555;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+
+    /* NEWS */
+
+    .news-section {
+        background: white;
+        padding: 80px 6%;
+    }
+
+    .news-inner {
+        max-width: 1200px;
         margin: auto;
     }
 
-    .features h2 {
-        font-size: 40px;
-        font-weight: normal;
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
         margin-bottom: 35px;
     }
 
-    .feature-grid {
+    .section-label {
+        display: block;
+        font-family: Arial, sans-serif;
+        color: #8b1e3f;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 42px;
+        font-weight: normal;
+    }
+
+    .view-all {
+        font-family: Arial, sans-serif;
+        color: #8b1e3f;
+        font-size: 12px;
+    }
+
+    .news-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-    .feature {
-        background: white;
-        border: 1px solid #ddd;
-        padding: 35px;
-        min-height: 230px;
+    .news-card {
+        border-top: 3px solid #8b1e3f;
+        border-bottom: 1px solid #ddd;
+        padding: 25px 5px 30px;
     }
 
-    .feature h3 {
-        font-size: 24px;
+    .news-date {
+        font-family: Arial, sans-serif;
+        color: #888;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .news-card h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        line-height: 1.3;
         font-weight: normal;
         margin-bottom: 15px;
     }
 
-    .feature p {
+    .news-card p {
         color: #666;
-        font-size: 14px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.7;
     }
 
-    .feature a {
+    .news-card a {
         display: inline-block;
-        margin-top: 22px;
+        margin-top: 20px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .news-card a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* INTRO */
+
+    .intro {
+        background: white;
+        padding: 90px 6%;
+    }
+
+    .intro-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .intro-text {
+        max-width: 850px;
+        margin-bottom: 45px;
+    }
+
+    .intro-text .section-label {
+        display: block;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .intro-text h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 44px;
+        line-height: 1.2;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .intro-text p {
+        color: #666;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .intro-image {
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    .intro-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    /* ACADEMICS */
+
+    .academics-section {
+        background: #f8f7f3;
+        padding: 80px 6%;
+    }
+
+    .academics-inner {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .academics-intro {
+        max-width: 850px;
+        color: #555;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+
+    .academic-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .academic-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 35px;
+        min-height: 310px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .academic-card:hover {
+        transform: translateY(-4px);
+        border-color: #8b1e3f;
+    }
+
+    .academic-number {
+        font-family: Arial, sans-serif;
+        color: #8b1e3f;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 45px;
+    }
+
+    .academic-card h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .academic-card p {
+        color: #666;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .academic-card span {
+        margin-top: auto;
+        padding-top: 25px;
         color: #8b1e3f;
         font-family: Arial, sans-serif;
         font-size: 12px;
     }
 
 
-    /* NEWS */
+    /* RESEARCH */
 
-    .news {
-        max-width: 1200px;
-        margin: auto;
+    .research-feature {
+        background: #8b1e3f;
+        color: white;
         padding: 85px 6%;
     }
 
-    .news h2 {
-        font-size: 40px;
-        font-weight: normal;
-        margin-bottom: 30px;
-    }
-
-    .news-grid {
+    .research-feature-inner {
+        max-width: 1200px;
+        margin: auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 80px;
+        align-items: center;
     }
 
-    .news-item {
-        border-top: 3px solid #8b1e3f;
-        padding-top: 20px;
+    .research-feature .section-label {
+        color: #e2cbd2;
     }
 
-    .news-date {
-        font-family: Arial, sans-serif;
-        color: #777;
-        font-size: 11px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .news-item h3 {
-        font-size: 21px;
+    .research-feature-content h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 44px;
+        line-height: 1.15;
         font-weight: normal;
-        margin: 10px 0;
+        margin: 12px 0 25px;
     }
 
-    .news-item p {
+    .research-feature-content p {
+        max-width: 650px;
+        color: #eee;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .research-button {
+        display: inline-block;
+        margin-top: 15px;
+        border: 1px solid white;
+        padding: 12px 22px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .research-button:hover {
+        background: white;
+        color: #8b1e3f;
+    }
+
+    .research-feature-list {
+        border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .research-item {
+        display: grid;
+        grid-template-columns: 45px 1fr;
+        gap: 20px;
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .research-item > span {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        color: #e2cbd2;
+        padding-top: 3px;
+    }
+
+    .research-item h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 7px;
+    }
+
+    .research-item p {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.6;
+        color: #e8e8e8;
+    }
+
+
+    /* CAMPUS */
+
+    .campus-feature {
+        background: white;
+        padding: 90px 6%;
+    }
+
+    .campus-feature-inner {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+    .campus-image {
+        height: 520px;
+        overflow: hidden;
+    }
+
+    .campus-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .campus-content {
+        max-width: 560px;
+    }
+
+    .campus-content .section-label {
+        display: block;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .campus-content h2 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 43px;
+        line-height: 1.15;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .campus-content p {
         color: #666;
-        font-size: 14px;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .campus-button {
+        display: inline-block;
+        margin-top: 15px;
+        background: #8b1e3f;
+        color: white;
+        padding: 13px 23px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .campus-button:hover {
+        background: #6f1832;
     }
 
 
@@ -428,6 +685,45 @@ display: block;
     }
 
 
+    /* MOBILE NAVIGATION */
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #222;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-divider {
+        height: 1px;
+        background: #ddd;
+        margin: 10px 0;
+    }
+
+    .mobile-language {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .mobile-language a {
+        color: #777;
+    }
+
+    .mobile-language a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+
     /* MOBILE */
 
     @media (max-width: 900px) {
@@ -458,703 +754,285 @@ display: block;
 
     }
 
-/* MOBILE NAVIGATION */
-
-.menu-toggle {
-display: none;
-background: none;
-border: none;
-font-size: 28px;
-cursor: pointer;
-color: #222;
-}
-
-.mobile-menu {
-display: none;
-}
-
-.mobile-divider {
-height: 1px;
-background: #ddd;
-margin: 10px 0;
-}
-
-.mobile-language {
-display: flex;
-gap: 8px;
-margin-top: 10px;
-padding-top: 10px;
-border-top: 1px solid #ddd;
-}
-
-.mobile-language a {
-color: #777;
-}
-
-.mobile-language a.active {
-color: #8b1e3f;
-font-weight: bold;
-}
-
-@media (max-width: 850px) {
-
-
-.header-main {
-    padding: 35px 6% 20px;
-    flex-direction: row;
-    text-align: left;
-}
-
-.brand {
-    flex-direction: row;
-    gap: 12px;
-}
-
-.logo {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
-}
-
-.university-name {
-    font-size: 20px;
-}
-
-.university-name span {
-    font-size: 9px;
-    letter-spacing: 2px;
-}
-
-nav {
-    display: none;
-}
-
-.menu-toggle {
-    display: block;
-}
-
-.language-switcher {
-    display: none;
-}
-
-.mobile-menu {
-    padding: 10px 6% 25px;
-    background: white;
-    border-top: 1px solid #ddd;
-}
-
-.mobile-menu.open {
-    display: flex;
-    flex-direction: column;
-}
-
-.mobile-menu > a {
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-}
-
-.mobile-menu > a:hover {
-    color: #8b1e3f;
-}
-
 
-}
-.university-stats {
-background: #eae8e1;
-padding: 55px 6%;
-}
-
-.stats-inner {
-max-width: 1200px;
-margin: auto;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 20px;
-}
-
-.stat-item {
-text-align: center;
-padding: 15px;
-}
-
-.stat-number {
-font-family: Georgia, "Times New Roman", serif;
-color: #8b1e3f;
-font-size: 38px;
-margin-bottom: 5px;
-}
-
-.stat-label {
-font-family: Arial, sans-serif;
-color: #555;
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-@media (max-width: 850px) {
-
- 
-.stats-inner {
-    grid-template-columns: repeat(2, 1fr);
-}
- 
-
-}
-
-@media (max-width: 500px) {
-
- 
-.stats-inner {
-    grid-template-columns: 1fr;
-}
- 
-
-}
-.news-section {
-background: white;
-padding: 80px 6%;
-}
-
-.news-inner {
-max-width: 1200px;
-margin: auto;
-}
-
-.section-heading {
-display: flex;
-justify-content: space-between;
-align-items: flex-end;
-margin-bottom: 35px;
-}
-
-.section-label {
-display: block;
-font-family: Arial, sans-serif;
-color: #8b1e3f;
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 8px;
-}
-
-.section-heading h2 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 42px;
-font-weight: normal;
-}
-
-.view-all {
-font-family: Arial, sans-serif;
-color: #8b1e3f;
-font-size: 12px;
-}
-
-.news-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
-
-.news-card {
-border-top: 3px solid #8b1e3f;
-border-bottom: 1px solid #ddd;
-padding: 25px 5px 30px;
-}
-
-.news-date {
-font-family: Arial, sans-serif;
-color: #888;
-font-size: 10px;
-letter-spacing: 1px;
-margin-bottom: 15px;
-}
-
-.news-card h3 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 22px;
-line-height: 1.3;
-font-weight: normal;
-margin-bottom: 15px;
-}
-
-.news-card p {
-color: #666;
-font-family: Arial, sans-serif;
-font-size: 13px;
-line-height: 1.7;
-}
-
-.news-card a {
-display: inline-block;
-margin-top: 20px;
-color: #8b1e3f;
-font-family: Arial, sans-serif;
-font-size: 12px;
-}
-
-.news-card a:hover {
-text-decoration: underline;
-}
-
-@media (max-width: 850px) {
-
-.section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.news-grid {
-    grid-template-columns: 1fr;
-}
-
-}
-
-.academics-section {
-background: #f8f7f3;
-padding: 80px 6%;
-}
-
-.academics-inner {
-max-width: 1200px;
-margin: auto;
-}
-
-.academics-intro {
-max-width: 850px;
-color: #555;
-font-family: Arial, sans-serif;
-font-size: 16px;
-line-height: 1.8;
-margin-bottom: 40px;
-}
-
-.academic-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-}
-
-.academic-card {
-background: white;
-border: 1px solid #ddd;
-padding: 35px;
-min-height: 310px;
-display: flex;
-flex-direction: column;
-transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.academic-card:hover {
-transform: translateY(-4px);
-border-color: #8b1e3f;
-}
-
-.academic-number {
-font-family: Arial, sans-serif;
-color: #8b1e3f;
-font-size: 12px;
-letter-spacing: 1px;
-margin-bottom: 45px;
-}
-
-.academic-card h3 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 28px;
-font-weight: normal;
-margin-bottom: 15px;
-}
-
-.academic-card p {
-color: #666;
-font-family: Arial, sans-serif;
-font-size: 13px;
-line-height: 1.7;
-}
-
-.academic-card span {
-margin-top: auto;
-padding-top: 25px;
-color: #8b1e3f;
-font-family: Arial, sans-serif;
-font-size: 12px;
-}
-
-@media (max-width: 850px) {
-
-.academic-grid {
-    grid-template-columns: 1fr;
-}
-
-.academic-card {
-    min-height: 260px;
-}
-
-}
-
-
-.research-feature {
-background: #8b1e3f;
-color: white;
-padding: 85px 6%;
-}
-
-.research-feature-inner {
-max-width: 1200px;
-margin: auto;
-display: grid;
-grid-template-columns: 1.2fr 1fr;
-gap: 80px;
-align-items: center;
-}
-
-.research-feature .section-label {
-color: #e2cbd2;
-}
-
-.research-feature-content h2 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 44px;
-line-height: 1.15;
-font-weight: normal;
-margin: 12px 0 25px;
-}
-
-.research-feature-content p {
-max-width: 650px;
-color: #eee;
-font-family: Arial, sans-serif;
-font-size: 15px;
-line-height: 1.8;
-margin-bottom: 15px;
-}
-
-.research-button {
-display: inline-block;
-margin-top: 15px;
-border: 1px solid white;
-padding: 12px 22px;
-font-family: Arial, sans-serif;
-font-size: 12px;
-}
-
-.research-button:hover {
-background: white;
-color: #8b1e3f;
-}
-
-.research-feature-list {
-border-top: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.research-item {
-display: grid;
-grid-template-columns: 45px 1fr;
-gap: 20px;
-padding: 25px 0;
-border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.research-item > span {
-font-family: Arial, sans-serif;
-font-size: 11px;
-color: #e2cbd2;
-padding-top: 3px;
-}
-
-.research-item h3 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 20px;
-font-weight: normal;
-margin-bottom: 7px;
-}
-
-.research-item p {
-font-family: Arial, sans-serif;
-font-size: 12px;
-line-height: 1.6;
-color: #e8e8e8;
-}
-
-@media (max-width: 850px) {
-
-
-.research-feature-inner {
-    grid-template-columns: 1fr;
-    gap: 50px;
-}
-
-.research-feature-content h2 {
-    font-size: 36px;
-}
-
-
-}
-
-.campus-feature {
-background: white;
-padding: 90px 6%;
-}
-
-.campus-feature-inner {
-max-width: 1200px;
-margin: auto;
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 70px;
-align-items: center;
-}
-
-.campus-image {
-height: 520px;
-overflow: hidden;
-}
-
-.campus-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-}
-
-.campus-content {
-max-width: 560px;
-}
-
-.campus-content .section-label {
-display: block;
-color: #8b1e3f;
-font-family: Arial, sans-serif;
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 12px;
-}
-
-.campus-content h2 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 43px;
-line-height: 1.15;
-font-weight: normal;
-margin-bottom: 25px;
-}
-
-.campus-content p {
-color: #666;
-font-family: Arial, sans-serif;
-font-size: 15px;
-line-height: 1.8;
-margin-bottom: 15px;
-}
-
-.campus-button {
-display: inline-block;
-margin-top: 15px;
-background: #8b1e3f;
-color: white;
-padding: 13px 23px;
-font-family: Arial, sans-serif;
-font-size: 12px;
-}
-
-.campus-button:hover {
-background: #6f1832;
-}
-
-@media (max-width: 850px) {
-
-```
-.campus-feature-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-
-.campus-image {
-    height: 350px;
-}
-
-.campus-content h2 {
-    font-size: 36px;
-}
-```
-
-}
-
-.intro {
-background: white;
-padding: 90px 6%;
-}
-
-.intro-inner {
-max-width: 1200px;
-margin: auto;
-}
-
-.intro-text {
-max-width: 850px;
-margin-bottom: 45px;
-}
-
-.intro-text .section-label {
-display: block;
-color: #8b1e3f;
-font-family: Arial, sans-serif;
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 12px;
-}
-
-.intro-text h2 {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 44px;
-line-height: 1.2;
-font-weight: normal;
-margin-bottom: 25px;
-}
-
-.intro-text p {
-color: #666;
-font-family: Arial, sans-serif;
-font-size: 15px;
-line-height: 1.8;
-}
-
-.intro-image {
-width: 100%;
-height: 480px;
-overflow: hidden;
-}
-
-.intro-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-display: block;
-}
-
-@media (max-width: 850px) {
-
-```
-.intro {
-    padding: 65px 6%;
-}
-
-.intro-text h2 {
-    font-size: 36px;
-}
-
-.intro-image {
-    height: 320px;
-}
-```
-
-}
-   
+    @media (max-width: 850px) {
+
+        .header-main {
+            padding: 35px 6% 20px;
+            flex-direction: row;
+            text-align: left;
+        }
+
+        .brand {
+            flex-direction: row;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .university-name {
+            font-size: 20px;
+        }
+
+        .university-name span {
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .language-switcher {
+            display: none;
+        }
+
+        .mobile-menu {
+            padding: 10px 6% 25px;
+            background: white;
+            border-top: 1px solid #ddd;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu > a {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .mobile-menu > a:hover {
+            color: #8b1e3f;
+        }
+
+        .stats-inner {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .section-heading {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .academic-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .academic-card {
+            min-height: 260px;
+        }
+
+        .research-feature-inner {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .research-feature-content h2 {
+            font-size: 36px;
+        }
+
+        .campus-feature-inner {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .campus-image {
+            height: 350px;
+        }
+
+        .campus-content h2 {
+            font-size: 36px;
+        }
+
+        .intro {
+            padding: 65px 6%;
+        }
+
+        .intro-text h2 {
+            font-size: 36px;
+        }
+
+        .intro-image {
+            height: 320px;
+        }
+
+        .hero {
+            padding: 60px 6%;
+        }
+
+        .hero-inner {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+        }
+
+        .hero-image {
+            height: 420px;
+        }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+        .stats-inner {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+        }
+
+        .hero-image {
+            height: 350px;
+        }
+
+    }
+
 </style>
-
 
 </head>
 
 <body>
 
-
-<!-- TOP BAR -->
+<!-- BARRE SUPÉRIEURE -->
 
 <div class="top-bar">
 
-    <a href="portal.html">Students</a>
+```
+<a href="portal.html">Étudiants</a>
 
-    <a href="faculty.html">Faculty & Staff</a>
+<a href="faculty.html">Personnel</a>
 
-    <a href="alumni.html">Alumni</a>
+<a href="alumni.html">Anciens étudiants</a>
 
-    <a href="library.html">Library</a>
+<a href="library.html">Bibliothèque</a>
+```
 
 </div>
 
-
-<!-- HEADER -->
+<!-- EN-TÊTE -->
 
 <header>
 
-
 <div class="header-main">
 
-    <div class="language-switcher">
-        <a href="index-fr.html">FR</a>
-        <span>|</span>
-        <a href="index.html" class="active">EN</a>
-    </div>
+```
+<div class="language-switcher">
 
+    <a href="index-fr.html" class="active">FR</a>
 
-    <div class="brand">
+    <span>|</span>
 
-        <div class="logo">
-            STU
-        </div>
-
-        <div class="university-name">
-
-            Stanford Toulouse University
-
-            <span>
-                EXCELLENCE WITHOUT BORDERS
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation menu">
-        ☰
-    </button>
-
-
-    <nav id="main-navigation">
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="academics.html">Academics</a>
-        <a href="research.html">Research</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="campus.html">Campus Life</a>
-        <a href="contact.html">Contact</a>
-
-    </nav>
+    <a href="index.html">EN</a>
 
 </div>
 
+
+<div class="brand">
+
+    <div class="logo">
+        STU
+    </div>
+
+    <div class="university-name">
+
+        Stanford Toulouse University
+
+        <span>
+            L'EXCELLENCE SANS FRONTIÈRES
+        </span>
+
+    </div>
+
+</div>
+
+
+<button class="menu-toggle" onclick="toggleMenu()" aria-label="Ouvrir le menu de navigation">
+    ☰
+</button>
+
+
+<nav id="main-navigation">
+
+    <a href="index-fr.html">Accueil</a>
+
+    <a href="about-fr.html">À propos</a>
+
+    <a href="academics-fr.html">Formations</a>
+
+    <a href="research-fr.html">Recherche</a>
+
+    <a href="admissions-fr.html">Admissions</a>
+
+    <a href="campus-fr.html">Vie du campus</a>
+
+    <a href="contact-fr.html">Contact</a>
+
+</nav>
+```
+
+</div>
 
 <div class="mobile-menu" id="mobile-menu">
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="academics.html">Academics</a>
-    <a href="research.html">Research</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="campus.html">Campus Life</a>
-    <a href="contact.html">Contact</a>
+```
+<a href="index-fr.html">Accueil</a>
 
-    <div class="mobile-divider"></div>
+<a href="about-fr.html">À propos</a>
 
-    <a href="portal.html">Students</a>
-    <a href="faculty.html">Faculty & Staff</a>
-    <a href="alumni.html">Alumni</a>
-    <a href="library.html">Library</a>
+<a href="academics-fr.html">Formations</a>
 
-    <div class="mobile-language">
-        <a href="index-fr.html">FR</a>
-        <span>|</span>
-        <a href="index.html" class="active">EN</a>
-    </div>
+<a href="research-fr.html">Recherche</a>
+
+<a href="admissions-fr.html">Admissions</a>
+
+<a href="campus-fr.html">Vie du campus</a>
+
+<a href="contact-fr.html">Contact</a>
+
+<div class="mobile-divider"></div>
+
+<a href="portal.html">Étudiants</a>
+
+<a href="faculty.html">Personnel</a>
+
+<a href="alumni.html">Anciens étudiants</a>
+
+<a href="library.html">Bibliothèque</a>
+
+<div class="mobile-language">
+
+    <a href="index-fr.html" class="active">FR</a>
+
+    <span>|</span>
+
+    <a href="index.html">EN</a>
 
 </div>
+```
 
+</div>
 
 </header>
 
@@ -1172,17 +1050,17 @@ display: block;
         </small>
 
         <h1>
-            Knowledge without borders.
+            Le savoir sans frontières.
         </h1>
 
         <p>
-            A leading international university in the heart of
-            Toulouse, bringing together ambitious students,
-            researchers and scholars from around the world.
+            Une université internationale de premier plan au cœur
+            de Toulouse, réunissant des étudiants, des chercheurs
+            et des universitaires ambitieux venus du monde entier.
         </p>
 
-        <a class="hero-button" href="about.html">
-            Discover Stanford Toulouse
+        <a class="hero-button" href="about-fr.html">
+            Découvrir Stanford Toulouse
         </a>
 
     </div>
@@ -1192,7 +1070,7 @@ display: block;
 
         <img
             src="images/campus interior.jpg"
-            alt="Stanford Toulouse University"
+            alt="Université Stanford Toulouse"
         >
 
     </div>
@@ -1202,8 +1080,7 @@ display: block;
 
 </section>
 
-
-<!-- UNIVERSITY STATS -->
+<!-- STATISTIQUES -->
 
 <section class="university-stats">
 
@@ -1213,11 +1090,11 @@ display: block;
     <div class="stat-item">
 
         <div class="stat-number">
-            12,000+
+            12 000+
         </div>
 
         <div class="stat-label">
-            Students
+            Étudiants
         </div>
 
     </div>
@@ -1230,7 +1107,7 @@ display: block;
         </div>
 
         <div class="stat-label">
-            Schools & Departments
+            Écoles et départements
         </div>
 
     </div>
@@ -1243,7 +1120,7 @@ display: block;
         </div>
 
         <div class="stat-label">
-            Countries Represented
+            Pays représentés
         </div>
 
     </div>
@@ -1252,11 +1129,11 @@ display: block;
     <div class="stat-item">
 
         <div class="stat-number">
-            96%
+            96 %
         </div>
 
         <div class="stat-label">
-            Graduate Employment Rate
+            Taux d'emploi des diplômés
         </div>
 
     </div>
@@ -1266,7 +1143,7 @@ display: block;
 
 </section>
 
-<!-- LATEST NEWS -->
+<!-- ACTUALITÉS -->
 
 <section class="news-section">
 
@@ -1276,12 +1153,19 @@ display: block;
     <div class="section-heading">
 
         <div>
-            <span class="section-label">University News</span>
-            <h2>Latest News</h2>
+
+            <span class="section-label">
+                Actualités de l'université
+            </span>
+
+            <h2>
+                Dernières actualités
+            </h2>
+
         </div>
 
         <a href="#" class="view-all">
-            View all news →
+            Toutes les actualités →
         </a>
 
     </div>
@@ -1293,20 +1177,21 @@ display: block;
         <article class="news-card">
 
             <div class="news-date">
-                AUGUST 28, 2026
+                28 AOÛT 2026
             </div>
 
             <h3>
-                Stanford Toulouse University welcomes the incoming class
+                Stanford Toulouse University accueille sa nouvelle promotion
             </h3>
 
             <p>
-                Students from across France and around the world
-                prepare to begin the 2026–27 academic year in Toulouse.
+                Des étudiants venus de France et du monde entier
+                se préparent à commencer l'année universitaire
+                2026–2027 à Toulouse.
             </p>
 
             <a href="#">
-                Read more →
+                Lire la suite →
             </a>
 
         </article>
@@ -1315,20 +1200,21 @@ display: block;
         <article class="news-card">
 
             <div class="news-date">
-                AUGUST 21, 2026
+                21 AOÛT 2026
             </div>
 
             <h3>
-                University announces new interdisciplinary research initiative
+                L'université annonce une nouvelle initiative de recherche interdisciplinaire
             </h3>
 
             <p>
-                A new initiative will bring together researchers from
-                multiple disciplines to address complex global challenges.
+                Une nouvelle initiative réunira des chercheurs
+                de plusieurs disciplines afin de répondre à des
+                enjeux mondiaux complexes.
             </p>
 
             <a href="#">
-                Read more →
+                Lire la suite →
             </a>
 
         </article>
@@ -1337,20 +1223,21 @@ display: block;
         <article class="news-card">
 
             <div class="news-date">
-                AUGUST 12, 2026
+                12 AOÛT 2026
             </div>
 
             <h3>
-                International partnerships expand opportunities for students
+                Les partenariats internationaux élargissent les possibilités offertes aux étudiants
             </h3>
 
             <p>
-                New academic partnerships will provide additional
-                opportunities for study, research, and international exchange.
+                De nouveaux partenariats universitaires offriront
+                davantage de possibilités d'études, de recherche
+                et d'échanges internationaux.
             </p>
 
             <a href="#">
-                Read more →
+                Lire la suite →
             </a>
 
         </article>
@@ -1363,7 +1250,7 @@ display: block;
 
 </section>
 
-<!-- INTRO -->
+<!-- TOULOUSE -->
 
 <section class="intro">
 
@@ -1373,19 +1260,20 @@ display: block;
     <div class="intro-text">
 
         <span class="section-label">
-            Our Location
+            Notre implantation
         </span>
 
         <h2>
-            A university shaped by its place.
+            Une université façonnée par son territoire.
         </h2>
 
         <p>
-            Stanford Toulouse University combines an international
-            outlook with the intellectual traditions of southern France.
-            Our community spans disciplines, cultures and generations,
-            united by a commitment to rigorous scholarship and
-            meaningful discovery.
+            Stanford Toulouse University associe une ouverture
+            internationale aux traditions intellectuelles du
+            sud de la France. Notre communauté rassemble des
+            disciplines, des cultures et des générations,
+            unies par un engagement en faveur de l'excellence
+            académique et de la découverte.
         </p>
 
     </div>
@@ -1405,8 +1293,7 @@ display: block;
 
 </section>
 
-
-<!-- ACADEMICS -->
+<!-- FORMATIONS -->
 
 <section class="academics-section">
 
@@ -1416,90 +1303,99 @@ display: block;
     <div class="section-heading">
 
         <div>
-            <span class="section-label">Academic Programs</span>
-            <h2>Study at Stanford Toulouse</h2>
+
+            <span class="section-label">
+                Programmes académiques
+            </span>
+
+            <h2>
+                Étudier à Stanford Toulouse
+            </h2>
+
         </div>
 
-        <a href="academics.html" class="view-all">
-            Explore Academics →
+        <a href="academics-fr.html" class="view-all">
+            Découvrir les formations →
         </a>
 
     </div>
 
 
     <p class="academics-intro">
-        Stanford Toulouse University offers an interdisciplinary
-        academic environment combining rigorous study, international
-        perspectives, and research-led education.
+        Stanford Toulouse University propose un environnement
+        académique interdisciplinaire associant exigence
+        intellectuelle, perspectives internationales et
+        enseignement fondé sur la recherche.
     </p>
 
 
     <div class="academic-grid">
 
 
-        <a href="academics.html" class="academic-card">
+        <a href="academics-fr.html" class="academic-card">
 
             <div class="academic-number">
                 01
             </div>
 
             <h3>
-                Undergraduate
+                Premier cycle
             </h3>
 
             <p>
-                Build a strong academic foundation through a broad
-                range of undergraduate programs across the university.
+                Acquérez de solides bases académiques grâce à
+                un large éventail de formations de premier cycle
+                proposées au sein de l'université.
             </p>
 
             <span>
-                Explore undergraduate study →
+                Découvrir le premier cycle →
             </span>
 
         </a>
 
 
-        <a href="academics.html" class="academic-card">
+        <a href="academics-fr.html" class="academic-card">
 
             <div class="academic-number">
                 02
             </div>
 
             <h3>
-                Graduate
+                Études supérieures
             </h3>
 
             <p>
-                Advance your expertise through master's programs,
-                professional study, and interdisciplinary graduate
-                education.
+                Approfondissez votre expertise grâce aux
+                programmes de master, aux formations
+                professionnelles et aux parcours interdisciplinaires.
             </p>
 
             <span>
-                Explore graduate study →
+                Découvrir les études supérieures →
             </span>
 
         </a>
 
 
-        <a href="research.html" class="academic-card">
+        <a href="research-fr.html" class="academic-card">
 
             <div class="academic-number">
                 03
             </div>
 
             <h3>
-                Research
+                Recherche
             </h3>
 
             <p>
-                Work alongside leading researchers and contribute
-                to projects addressing important scientific and
-                societal questions.
+                Travaillez aux côtés de chercheurs de premier plan
+                et contribuez à des projets portant sur des enjeux
+                scientifiques et sociétaux majeurs.
             </p>
 
             <span>
-                Discover research →
+                Découvrir la recherche →
             </span>
 
         </a>
@@ -1512,7 +1408,7 @@ display: block;
 
 </section>
 
-<!-- FEATURED RESEARCH -->
+<!-- RECHERCHE -->
 
 <section class="research-feature">
 
@@ -1522,28 +1418,29 @@ display: block;
     <div class="research-feature-content">
 
         <span class="section-label">
-            Research & Innovation
+            Recherche et innovation
         </span>
 
         <h2>
-            Research with international impact.
+            Une recherche à portée internationale.
         </h2>
 
         <p>
-            Stanford Toulouse University brings together researchers
-            across disciplines to advance knowledge and address
-            complex challenges facing society.
+            Stanford Toulouse University réunit des chercheurs
+            issus de différentes disciplines afin de faire
+            progresser les connaissances et de répondre aux
+            enjeux complexes auxquels la société est confrontée.
         </p>
 
         <p>
-            From fundamental science and engineering to social
-            sciences and the humanities, our research community
-            combines international collaboration with a strong
-            commitment to discovery.
+            Des sciences fondamentales et de l'ingénierie aux
+            sciences sociales et aux humanités, notre communauté
+            scientifique associe collaboration internationale
+            et engagement en faveur de la découverte.
         </p>
 
-        <a href="research.html" class="research-button">
-            Explore Research →
+        <a href="research-fr.html" class="research-button">
+            Découvrir la recherche →
         </a>
 
     </div>
@@ -1558,14 +1455,16 @@ display: block;
             </span>
 
             <div>
+
                 <h3>
-                    Interdisciplinary Research
+                    Recherche interdisciplinaire
                 </h3>
 
                 <p>
-                    Researchers collaborate across traditional
-                    academic boundaries.
+                    Les chercheurs collaborent au-delà des
+                    frontières traditionnelles entre disciplines.
                 </p>
+
             </div>
 
         </div>
@@ -1578,14 +1477,16 @@ display: block;
             </span>
 
             <div>
+
                 <h3>
-                    International Collaboration
+                    Collaboration internationale
                 </h3>
 
                 <p>
-                    Partnerships connect our researchers with
-                    institutions around the world.
+                    Des partenariats relient nos chercheurs à
+                    des institutions du monde entier.
                 </p>
+
             </div>
 
         </div>
@@ -1598,14 +1499,16 @@ display: block;
             </span>
 
             <div>
+
                 <h3>
-                    Research Excellence
+                    Excellence scientifique
                 </h3>
 
                 <p>
-                    Academic research is central to the university's
-                    educational mission.
+                    La recherche académique occupe une place
+                    centrale dans la mission éducative de l'université.
                 </p>
+
             </div>
 
         </div>
@@ -1616,7 +1519,8 @@ display: block;
 ```
 
 </section>
-<!-- CAMPUS & TOULOUSE -->
+
+<!-- CAMPUS ET TOULOUSE -->
 
 <section class="campus-feature">
 
@@ -1627,7 +1531,7 @@ display: block;
 
         <img
             src="images/vivre-toulouse.png"
-            alt="Historic architecture in Toulouse"
+            alt="Architecture historique de Toulouse"
         >
 
     </div>
@@ -1636,28 +1540,30 @@ display: block;
     <div class="campus-content">
 
         <span class="section-label">
-            Campus & Location
+            Campus et implantation
         </span>
 
         <h2>
-            An international university in Toulouse.
+            Une université internationale à Toulouse.
         </h2>
 
         <p>
-            Located in the historic city of Toulouse, Stanford
-            Toulouse University brings together an international
-            academic community in one of Europe's leading centres
-            for education, research and innovation.
+            Située dans la ville historique de Toulouse,
+            Stanford Toulouse University rassemble une
+            communauté académique internationale au cœur
+            de l'un des principaux pôles européens d'éducation,
+            de recherche et d'innovation.
         </p>
 
         <p>
-            The university's campus provides spaces for study,
-            collaboration, research and student life, with the
-            cultural and academic resources of Toulouse close at hand.
+            Le campus offre des espaces dédiés aux études,
+            à la collaboration, à la recherche et à la vie
+            étudiante, tout en bénéficiant de l'accès aux
+            ressources culturelles et académiques de Toulouse.
         </p>
 
-        <a href="campus.html" class="campus-button">
-            Discover Campus Life →
+        <a href="campus-fr.html" class="campus-button">
+            Découvrir la vie du campus →
         </a>
 
     </div>
@@ -1667,8 +1573,7 @@ display: block;
 
 </section>
 
-   
-<!-- QUOTE -->
+<!-- CITATION -->
 
 <section class="quote">
 
@@ -1676,7 +1581,7 @@ display: block;
 <div class="quote-inner">
 
     <blockquote>
-        "The pursuit of knowledge is a journey without borders."
+        « La quête du savoir est un voyage sans frontières. »
     </blockquote>
 
     <cite>
@@ -1688,50 +1593,49 @@ display: block;
 
 </section>
 
-<!-- FOOTER -->
+<!-- PIED DE PAGE -->
 
 <footer>
 
 ```
 <div class="footer-inner">
 
-
     <div class="footer-links">
 
-        <a href="about.html">
-            About
+        <a href="about-fr.html">
+            À propos
         </a>
 
-        <a href="academics.html">
-            Academics
+        <a href="academics-fr.html">
+            Formations
         </a>
 
-        <a href="research.html">
-            Research
+        <a href="research-fr.html">
+            Recherche
         </a>
 
-        <a href="admissions.html">
+        <a href="admissions-fr.html">
             Admissions
         </a>
 
-        <a href="campus.html">
-            Campus Life
+        <a href="campus-fr.html">
+            Vie du campus
         </a>
 
-        <a href="contact.html">
+        <a href="contact-fr.html">
             Contact
         </a>
 
         <a href="faculty.html">
-            Faculty & Staff
+            Personnel
         </a>
 
         <a href="alumni.html">
-            Alumni
+            Anciens étudiants
         </a>
 
         <a href="library.html">
-            Library
+            Bibliothèque
         </a>
 
     </div>
@@ -1742,11 +1646,11 @@ display: block;
     </p>
 
     <p style="margin-top: 12px;">
-        Stanford Toulouse University is a fictional institution
-        created for entertainment purposes and is not affiliated
-        with Stanford University or any real university.
+        Stanford Toulouse University est une institution
+        fictive créée à des fins de divertissement et n'est
+        affiliée ni à Stanford University ni à aucune autre
+        université réelle.
     </p>
-
 
 </div>
 ```
