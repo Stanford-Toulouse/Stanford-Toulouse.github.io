@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Research — Stanford Toulouse University</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 25px 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6% 60px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .research-grid {
+        max-width: 1300px;
+        margin: auto;
+        padding: 20px 6% 90px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .research-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 35px;
+    }
+
+    .research-number {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .research-card h2 {
+        font-size: 27px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .research-card p {
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .research-card a {
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .numbers {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .numbers-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .numbers h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 40px;
+    }
+
+    .numbers-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .number strong {
+        display: block;
+        color: #8b1e3f;
+        font-size: 42px;
+        font-weight: normal;
+    }
+
+    .number span {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #666;
+    }
+
+    .publication {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .publication h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .paper {
+        border-top: 1px solid #ccc;
+        padding: 22px 0;
+    }
+
+    .paper:last-child {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .paper small {
+        font-family: Arial, sans-serif;
+        color: #8b1e3f;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .paper h3 {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 7px 0;
+    }
+
+    .paper p {
+        color: #777;
+        font-size: 14px;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    footer p {
+        color: #aaa;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .research-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .numbers-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="top-bar">
+    <a href="#">Students</a>
+    <a href="#">Faculty & Staff</a>
+    <a href="#">Alumni</a>
+    <a href="#">Library</a>
+</div>
+
+
+<header>
+
+    <div class="header-main">
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+                Stanford Toulouse University
+                <span>EXCELLENCE WITHOUT BORDERS</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="research.html">Research</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="#">Campus Life</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>Stanford Toulouse University</small>
+
+        <h1>Research</h1>
+
+    </div>
+
+</section>
+
+
+<section class="intro">
+
+    <h2>Research that moves knowledge forward.</h2>
+
+    <p>
+        Research at Stanford Toulouse University brings together
+        scholars from multiple disciplines to address complex
+        scientific, technological and social questions.
+    </p>
+
+    <p>
+        From aerospace systems and artificial intelligence to
+        sustainable cities and human performance, our researchers
+        work across traditional academic boundaries to develop
+        knowledge with global impact.
+    </p>
+
+</section>
+
+
+<section class="research-grid">
+
+
+    <div class="research-card">
+
+        <div class="research-number">
+            RESEARCH CENTRE 01
+        </div>
+
+        <h2>
+            Institute for Aerospace Systems
+        </h2>
+
+        <p>
+            Research in advanced aerospace engineering, autonomous
+            systems, propulsion and next-generation transportation.
+        </p>
+
+        <a href="#">
+            Explore research →
+        </a>
+
+    </div>
+
+
+    <div class="research-card">
+
+        <div class="research-number">
+            RESEARCH CENTRE 02
+        </div>
+
+        <h2>
+            Centre for Artificial Intelligence
+        </h2>
+
+        <p>
+            Interdisciplinary research exploring machine learning,
+            intelligent systems, computational science and the
+            social implications of AI.
+        </p>
+
+        <a href="#">
+            Explore research →
+        </a>
+
+    </div>
+
+
+    <div class="research-card">
+
+        <div class="research-number">
+            RESEARCH CENTRE 03
+        </div>
+
+        <h2>
+            Institute for Sustainable Cities
+        </h2>
+
+        <p>
+            Research addressing urban mobility, energy systems,
+            resilient infrastructure and sustainable development.
+        </p>
+
+        <a href="#">
+            Explore research →
+        </a>
+
+    </div>
+
+
+    <div class="research-card">
+
+        <div class="research-number">
+            RESEARCH CENTRE 04
+        </div>
+
+        <h2>
+            Centre for Human Performance
+        </h2>
+
+        <p>
+            Research into cognition, productivity, decision-making
+            and the relationship between human performance and
+            the modern working environment.
+        </p>
+
+        <a href="#">
+            Explore research →
+        </a>
+
+    </div>
+
+
+    <div class="research-card">
+
+        <div class="research-number">
+            RESEARCH CENTRE 05
+        </div>
+
+        <h2>
+            European Centre for Economic Policy
+        </h2>
+
+        <p>
+            Applied research examining markets, institutions,
+            economic policy and the changing European economy.
+        </p>
+
+        <a href="#">
+            Explore research →
+        </a>
+
+    </div>
+
+
+    <div class="research-card">
+
+        <div class="research-number">
+            RESEARCH CENTRE 06
+        </div>
+
+        <h2>
+            Laboratory for Food Systems
+        </h2>
+
+        <p>
+            Research into food science, nutrition, agricultural
+            systems and the cultural dimensions of food.
+        </p>
+
+        <a href="#">
+            Explore research →
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="numbers">
+
+    <div class="numbers-inner">
+
+        <h2>Research at a glance</h2>
+
+
+        <div class="numbers-grid">
+
+            <div class="number">
+                <strong>1,904</strong>
+                <span>Annual Publications</span>
+            </div>
+
+            <div class="number">
+                <strong>€214M</strong>
+                <span>Research Funding</span>
+            </div>
+
+            <div class="number">
+                <strong>86</strong>
+                <span>Research Groups</span>
+            </div>
+
+            <div class="number">
+                <strong>41</strong>
+                <span>Countries with Partners</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="publication">
+
+    <h2>Selected publications</h2>
+
+
+    <div class="paper">
+
+        <small>2026 · AEROSPACE SYSTEMS</small>
+
+        <h3>
+            Distributed Control Architectures for Autonomous
+            Urban Air Mobility
+        </h3>
+
+        <p>
+            J. Martin, L. Bernard, S. Rahman and M. Keller
+        </p>
+
+    </div>
+
+
+    <div class="paper">
+
+        <small>2026 · ARTIFICIAL INTELLIGENCE</small>
+
+        <h3>
+            Robust Decision-Making Under Uncertain Information
+        </h3>
+
+        <p>
+            C. Dubois, A. Laurent, P. Singh and E. Moreau
+        </p>
+
+    </div>
+
+
+    <div class="paper">
+
+        <small>2025 · HUMAN PERFORMANCE</small>
+
+        <h3>
+            Temporal Perception and Productivity During
+            High-Intensity Academic Periods
+        </h3>
+
+        <p>
+            A. Morel, T. Fischer, J. Williams and R. Chen
+        </p>
+
+    </div>
+
+
+    <div class="paper">
+
+        <small>2025 · FOOD SYSTEMS</small>
+
+        <h3>
+            Structural Properties of Laminated Pastry Systems
+            Under Variable Thermal Conditions
+        </h3>
+
+        <p>
+            M. Laurent, E. Garcia and N. Petit
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <p>
+            © 2026 Stanford Toulouse University.
+        </p>
+
+        <p style="margin-top:15px;">
+            Stanford Toulouse University is a fictional institution
+            created for entertainment purposes and is not affiliated
+            with Stanford University or any real university.
+        </p>
+
+    </div>
+
+</footer>
+```
+
+</body>
+</html>
