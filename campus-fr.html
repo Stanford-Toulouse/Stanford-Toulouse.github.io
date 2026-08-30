@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vie du campus — Université Stanford Toulouse</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #222;
+        background: #f8f7f3;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .top-bar {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 8px 6%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    header {
+        background: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-main {
+        max-width: 1300px;
+        margin: auto;
+        padding: 45px 6% 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        border: 3px solid #8b1e3f;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8b1e3f;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .university-name {
+        font-size: 27px;
+        line-height: 1.05;
+    }
+
+    .university-name span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 7px;
+        color: #777;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        display: flex;
+        gap: 22px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #8b1e3f;
+    }
+
+    .language-switcher {
+        position: absolute;
+        top: 12px;
+        right: 6%;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .language-switcher a {
+        color: #777;
+    }
+
+    .language-switcher a.active {
+        color: #8b1e3f;
+        font-weight: bold;
+    }
+
+    .language-switcher a:hover {
+        color: #8b1e3f;
+    }
+
+    .page-hero {
+        background: #8b1e3f;
+        color: white;
+        padding: 90px 6%;
+    }
+
+    .page-hero-inner {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .page-hero small {
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .page-hero h1 {
+        font-size: 65px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+
+    .intro {
+        max-width: 1100px;
+        margin: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .intro h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 18px;
+        max-width: 900px;
+    }
+
+    .campus-section {
+        background: #eae8e1;
+        padding: 75px 6%;
+    }
+
+    .campus-inner {
+        max-width: 1250px;
+        margin: auto;
+    }
+
+    .campus-section h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 35px;
+    }
+
+    .campus-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .campus-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 32px;
+        min-height: 250px;
+    }
+
+    .campus-card h3 {
+        font-size: 23px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .campus-card p {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .campus-card a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #8b1e3f;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .student-life {
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 6%;
+    }
+
+    .student-life h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .student-life > p {
+        color: #666;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 40px;
+    }
+
+    .life-list {
+        border-top: 1px solid #ccc;
+    }
+
+    .life-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 25px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .life-item h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .life-item p {
+        color: #777;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-align: right;
+        max-width: 500px;
+    }
+
+    .housing {
+        background: #f1efe9;
+        padding: 75px 6%;
+    }
+
+    .housing-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .housing h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .housing p {
+        color: #666;
+        font-size: 17px;
+        max-width: 850px;
+        margin-bottom: 20px;
+    }
+
+    .housing-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .housing-card {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 30px;
+    }
+
+    .housing-card h3 {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    .housing-card p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .community {
+        background: #8b1e3f;
+        color: white;
+        padding: 75px 6%;
+    }
+
+    .community-inner {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .community h2 {
+        font-size: 40px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .community p {
+        color: #eee;
+        font-size: 17px;
+        max-width: 850px;
+    }
+
+    footer {
+        background: #151515;
+        color: white;
+        padding: 50px 6% 30px;
+    }
+
+    .footer-inner {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+
+    .footer-links a:hover {
+        color: #c9a3b0;
+    }
+
+    footer p {
+        color: #888;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+
+        .header-main {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .brand {
+            flex-direction: column;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .page-hero h1 {
+            font-size: 50px;
+        }
+
+        .campus-grid,
+        .housing-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .life-item {
+            flex-direction: column;
+        }
+
+        .life-item p {
+            text-align: left;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+    <a href="portal-fr.html">
+        Étudiants
+    </a>
+
+    <a href="faculty-fr.html">
+        Enseignants et personnel
+    </a>
+
+    <a href="alumni-fr.html">
+        Anciens élèves
+    </a>
+
+    <a href="library-fr.html">
+        Bibliothèque
+    </a>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="header-main">
+
+
+        <div class="language-switcher">
+
+            <a href="campus-fr.html" class="active">
+                FR
+            </a>
+
+            <span>|</span>
+
+            <a href="campus.html">
+                EN
+            </a>
+
+        </div>
+
+
+        <div class="brand">
+
+            <div class="logo">
+                STU
+            </div>
+
+            <div class="university-name">
+
+                Université Stanford Toulouse
+
+                <span>
+                    L'EXCELLENCE SANS FRONTIÈRES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="campus-fr.html">
+                Vie du campus
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <small>
+            Université Stanford Toulouse
+        </small>
+
+        <h1>
+            Vie du campus
+        </h1>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <h2>
+        Un environnement universitaire ouvert et dynamique.
+    </h2>
+
+    <p>
+        La vie à l'Université Stanford Toulouse s'organise autour
+        d'une communauté internationale, d'espaces dédiés à
+        l'apprentissage et à la recherche, et d'un large éventail
+        d'activités permettant aux étudiants de développer leurs
+        intérêts au-delà de leur formation académique.
+    </p>
+
+</section>
+
+
+<!-- CAMPUS FACILITIES -->
+
+<section class="campus-section">
+
+    <div class="campus-inner">
+
+        <h2>
+            Installations et services
+        </h2>
+
+
+        <div class="campus-grid">
+
+
+            <div class="campus-card">
+
+                <h3>
+                    Bibliothèque universitaire
+                </h3>
+
+                <p>
+                    Des collections physiques et numériques,
+                    des espaces de travail individuels et
+                    collectifs ainsi que des services destinés
+                    à accompagner les étudiants et les chercheurs.
+                </p>
+
+                <a href="library-fr.html">
+                    Découvrir la bibliothèque →
+                </a>
+
+            </div>
+
+
+            <div class="campus-card">
+
+                <h3>
+                    Centres sportifs
+                </h3>
+
+                <p>
+                    Des infrastructures sportives accessibles
+                    aux étudiants et permettant la pratique
+                    individuelle et collective de nombreuses
+                    disciplines.
+                </p>
+
+                <a href="#">
+                    Découvrir les installations →
+                </a>
+
+            </div>
+
+
+            <div class="campus-card">
+
+                <h3>
+                    Espaces étudiants
+                </h3>
+
+                <p>
+                    Des espaces conçus pour le travail, les
+                    rencontres, les associations et les activités
+                    organisées par la communauté étudiante.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="campus-card">
+
+                <h3>
+                    Services de santé
+                </h3>
+
+                <p>
+                    Un ensemble de services destinés à accompagner
+                    les étudiants dans leur parcours universitaire
+                    et à favoriser leur bien-être.
+                </p>
+
+                <a href="#">
+                    Découvrir les services →
+                </a>
+
+            </div>
+
+
+            <div class="campus-card">
+
+                <h3>
+                    Restauration
+                </h3>
+
+                <p>
+                    Plusieurs espaces de restauration proposent
+                    des solutions adaptées aux différents rythmes
+                    de la vie universitaire.
+                </p>
+
+                <a href="#">
+                    En savoir plus →
+                </a>
+
+            </div>
+
+
+            <div class="campus-card">
+
+                <h3>
+                    Mobilité sur le campus
+                </h3>
+
+                <p>
+                    Le campus bénéficie d'un accès facilité aux
+                    transports publics et aux principaux quartiers
+                    de Toulouse.
+                </p>
+
+                <a href="#">
+                    Informations pratiques →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUDENT LIFE -->
+
+<section class="student-life">
+
+    <h2>
+        Vie étudiante
+    </h2>
+
+    <p>
+        Les étudiants peuvent participer à de nombreuses activités
+        et associations qui contribuent à la richesse de la vie
+        universitaire.
+    </p>
+
+
+    <div class="life-list">
+
+
+        <div class="life-item">
+
+            <h3>
+                Associations étudiantes
+            </h3>
+
+            <p>
+                Plus de 200 associations couvrent les domaines
+                culturels, scientifiques, artistiques et sociaux.
+            </p>
+
+        </div>
+
+
+        <div class="life-item">
+
+            <h3>
+                Arts et culture
+            </h3>
+
+            <p>
+                Concerts, expositions, conférences et événements
+                culturels organisés tout au long de l'année.
+            </p>
+
+        </div>
+
+
+        <div class="life-item">
+
+            <h3>
+                Sport universitaire
+            </h3>
+
+            <p>
+                Des équipes universitaires et des activités
+                sportives ouvertes à tous les niveaux.
+            </p>
+
+        </div>
+
+
+        <div class="life-item">
+
+            <h3>
+                Engagement étudiant
+            </h3>
+
+            <p>
+                Des initiatives permettant aux étudiants de
+                participer à des projets associatifs et citoyens.
+            </p>
+
+        </div>
+
+
+        <div class="life-item">
+
+            <h3>
+                Événements universitaires
+            </h3>
+
+            <p>
+                Conférences, rencontres, cérémonies et événements
+                réunissant l'ensemble de la communauté universitaire.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- HOUSING -->
+
+<section class="housing">
+
+    <div class="housing-inner">
+
+        <h2>
+            Logement étudiant
+        </h2>
+
+        <p>
+            L'université accompagne les étudiants dans leur
+            recherche de logement et met à leur disposition
+            des informations concernant les différentes options
+            disponibles à Toulouse.
+        </p>
+
+        <p>
+            Les étudiants peuvent accéder à des résidences
+            universitaires, à des logements privés et à différents
+            dispositifs d'accompagnement selon leur situation.
+        </p>
+
+
+        <div class="housing-grid">
+
+
+            <div class="housing-card">
+
+                <h3>
+                    Résidences universitaires
+                </h3>
+
+                <p>
+                    Des solutions de logement à proximité des
+                    principaux sites universitaires.
+                </p>
+
+            </div>
+
+
+            <div class="housing-card">
+
+                <h3>
+                    Logement privé
+                </h3>
+
+                <p>
+                    Informations et ressources pour rechercher
+                    un logement dans l'agglomération toulousaine.
+                </p>
+
+            </div>
+
+
+            <div class="housing-card">
+
+                <h3>
+                    Étudiants internationaux
+                </h3>
+
+                <p>
+                    Un accompagnement spécifique pour faciliter
+                    l'installation des étudiants venant de
+                    l'étranger.
+                </p>
+
+            </div>
+
+
+            <div class="housing-card">
+
+                <h3>
+                    Conseils et accompagnement
+                </h3>
+
+                <p>
+                    Des ressources pratiques concernant les
+                    démarches liées au logement et à l'installation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMUNITY -->
+
+<section class="community">
+
+    <div class="community-inner">
+
+        <h2>
+            Une communauté internationale
+        </h2>
+
+        <p>
+            Avec des étudiants et des chercheurs issus de nombreux
+            pays, l'Université Stanford Toulouse offre un environnement
+            dans lequel les échanges internationaux occupent une place
+            importante. La vie de campus constitue un prolongement
+            naturel de l'expérience académique.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div class="footer-links">
+
+            <a href="index-fr.html">
+                Accueil
+            </a>
+
+            <a href="about-fr.html">
+                À propos
+            </a>
+
+            <a href="academics-fr.html">
+                Formations
+            </a>
+
+            <a href="research-fr.html">
+                Recherche
+            </a>
+
+            <a href="admissions-fr.html">
+                Admissions
+            </a>
+
+            <a href="contact-fr.html">
+                Contact
+            </a>
+
+            <a href="faculty-fr.html">
+                Enseignants et personnel
+            </a>
+
+            <a href="alumni-fr.html">
+                Anciens élèves
+            </a>
+
+            <a href="library-fr.html">
+                Bibliothèque
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Université Stanford Toulouse.
+        </p>
+
+        <p style="margin-top: 12px;">
+            L'Université Stanford Toulouse est une institution
+            fictive créée à des fins de divertissement et n'est
+            affiliée à aucune université réelle.
+        </p>
+
+
+    </div>
+
+</footer>
+```
+
+</body>
+
+</html>
