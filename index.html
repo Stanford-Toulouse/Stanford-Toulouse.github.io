@@ -496,6 +496,58 @@ nav {
 
 
 }
+.university-stats {
+background: #eae8e1;
+padding: 55px 6%;
+}
+
+.stats-inner {
+max-width: 1200px;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.stat-item {
+text-align: center;
+padding: 15px;
+}
+
+.stat-number {
+font-family: Georgia, "Times New Roman", serif;
+color: #8b1e3f;
+font-size: 38px;
+margin-bottom: 5px;
+}
+
+.stat-label {
+font-family: Arial, sans-serif;
+color: #555;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+@media (max-width: 850px) {
+
+```
+.stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+}
+```
+
+}
+
+@media (max-width: 500px) {
+
+```
+.stats-inner {
+    grid-template-columns: 1fr;
+}
+```
+
+}
 
    
 </style>
@@ -629,6 +681,66 @@ nav {
         </a>
 
     </div>
+
+</section>
+<section class="university-stats">
+
+```
+<div class="stats-inner">
+
+    <div class="stat-item">
+
+        <div class="stat-number">
+            12,000+
+        </div>
+
+        <div class="stat-label">
+            Students
+        </div>
+
+    </div>
+
+
+    <div class="stat-item">
+
+        <div class="stat-number">
+            18
+        </div>
+
+        <div class="stat-label">
+            Schools & Departments
+        </div>
+
+    </div>
+
+
+    <div class="stat-item">
+
+        <div class="stat-number">
+            42
+        </div>
+
+        <div class="stat-label">
+            Countries Represented
+        </div>
+
+    </div>
+
+
+    <div class="stat-item">
+
+        <div class="stat-number">
+            96%
+        </div>
+
+        <div class="stat-label">
+            Graduate Employment Rate
+        </div>
+
+    </div>
+
+</div>
+```
 
 </section>
 
